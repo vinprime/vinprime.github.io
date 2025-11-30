@@ -1,13 +1,10 @@
-.about-hero {
-  padding: 120px 20px;
+.about-hero { 
   background: url('../../images/root/hero-about.jpg') center/cover;
   color: white;
   text-align: center;
 }
 
-.about-section {
-  padding: 60px 20px;
-  max-width: 1100px;
+.about-section {  
   margin: auto;
   line-height: 1.7;
 }

@@ -1,14 +1,10 @@
-.contact-wrapper {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
+.contact-wrapper { 
+  margin: auto; 
 }
 
 .contact-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  background: #fff; 
+  border-radius: 12px; 
 }
 
 .contact-card h2 {

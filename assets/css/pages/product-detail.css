@@ -1,6 +1,4 @@
-.product-detail-container {
-  max-width: 1200px;
-  padding: 60px 20px;
+.product-detail-container { 
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;

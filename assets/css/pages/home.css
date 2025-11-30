@@ -1,12 +1,11 @@
 /* Main container */
 main.container { 
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 auto; 
 }
 /* Hero Section full-width */
 .hero {
-  width: 100vw;                /* full viewport width */
-  padding: 120px 0 80px;
+  height: 400px;
+  width: 100vw; 
   background: url('../../images/root/hero.jpg') center/cover no-repeat;
   text-align: center;
   color: #fff;
@@ -15,8 +14,7 @@ main.container {
 }
 
 /* Hero inner: giới hạn nội dung để không quá rộng */
-.hero-inner {
-  max-width: 1200px;           /* giới hạn nội dung */
+.hero-inner { 
   margin: 0 auto;
   position: relative;
   z-index: 2;

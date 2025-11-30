@@ -1,42 +1,40 @@
+/* HEADER WRAPPER */
 header {
     background: #fff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     position: sticky;
     top: 0;
     z-index: 999;
-    height: 150px;
-    /* chiều cao header cố định */
-    overflow: hidden;
+    height: 150px;        /* cố định header */
+    overflow: visible;    /* tránh ép flex items, tránh bóp méo logo */
 }
 
-/* Header cố định chiều cao */
+/* FLEX INNER */
 header .header-inner {
     display: flex;
     justify-content: space-between;
-    /* logo trái, menu phải */
     align-items: center;
-    padding: 0 20px;
-    height: 100px;
-    /* cố định chiều cao header */
+    height: 150px;        /* PHẢI = header */
     box-sizing: border-box;
 }
 
-/* Logo cố định chiều cao */
+/* LOGO */
 header .logo {
-    height: 300px;
-    /* chiều cao logo cố định */
-    width: auto;
-    display: block;
+   max-width: none !important;
+    width: auto !important;
+    height: 100px !important;
 }
 
-/* Menu căn giữa theo chiều cao header */
+/* NAVIGATION */
+header .nav {
+    flex-shrink: 1;       /* menu có thể co, không ép logo */
+}
+
 header .nav ul {
     display: flex;
     gap: 24px;
     list-style: none;
     align-items: center;
-    /* căn theo chiều cao header */
+    white-space: nowrap;  /* không xuống dòng */
 }
 
 header .nav li a {
@@ -54,10 +52,10 @@ header .nav li.phone a {
     color: #007b46;
 }
 
+
 footer {
     background: #222;
-    color: #fff;
-    padding: 40px 20px;
+    color: #fff; 
     text-align: center;
     margin-top: 60px;
 }
@@ -76,8 +74,7 @@ footer .footer-inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px 0;
+    gap: 20px; 
 }
 
 footer .footer-col {

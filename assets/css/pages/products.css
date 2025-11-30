@@ -1,29 +1,22 @@
-.products-hero {
-  padding: 120px 0 80px;
+.products-hero { 
   background: url('../../images/root/hero.jpg') center/cover;
   text-align: center;
   color: #fff;
 }
 
-.product-list {
-  max-width: 1300px;
-  margin: auto;
-  padding: 60px 20px;
+.product-list { 
+  margin: auto; 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-.product-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+.product-card {  
+  border-radius: 12px; 
   transition: 0.3s;
   cursor: pointer;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  transform: translateY(-6px); 
 }
