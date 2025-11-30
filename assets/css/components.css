@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #007b46;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005d34;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "mun-cua",
+    "name": "Mùn cưa ép viên",
+    "image": "/assets/images/products/mun-cua.jpg",
+    "description": "Mùn cưa sạch, độ ẩm thấp, chuyên cung cấp cho nhà máy sản xuất viên nén.",
+    "specs": {
+      "Độ ẩm": "10-12%",
+      "Kích thước hạt": "2–5mm",
+      "Đóng gói": "Bao 20–25kg"
+    }
+  },
+  {
+    "id": "vien-nen-go",
+    "name": "Viên nén gỗ",
+    "image": "/assets/images/products/vien-nen.jpg",
+    "description": "Viên nén xuất khẩu tiêu chuẩn ENPlus A1.",
+    "specs": {
+      "Đường kính": "8mm",
+      "Chất liệu": "Gỗ keo, gỗ thông",
+      "Đóng gói": "Túi 15kg / Bigbag"
+    }
+  }
+]

@@ -1,0 +1,17 @@
+.product-detail-container {
+  max-width: 1200px;
+  padding: 60px 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.product-detail-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product-detail-info h1 {
+  margin-bottom: 20px;
+}

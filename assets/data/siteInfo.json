@@ -1,0 +1,12 @@
+{
+  "siteName": "VinPrime Wood",
+  "logo": "/assets/images/logo.png",
+  "phone": "+84 912 345 678",
+  "email": "contact@vinprime.com",
+  "address": "KCN VSIP, Bình Dương, Việt Nam",
+  "social": {
+    "facebook": "https://facebook.com/vinprime",
+    "zalo": "https://zalo.me/123456789",
+    "youtube": "https://youtube.com/@vinprime"
+  }
+}
