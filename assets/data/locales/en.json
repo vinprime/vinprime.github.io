@@ -51,5 +51,40 @@
     "contactUs": "Contact Us",
     "send": "Send",
     "subscribe": "Subscribe"
+  },
+  "about": {
+    "about": {
+      "title": "About VinPrime",
+      "description": "Established in March 2023, with the knowledge accumulated from many years of experience of the Founders, VIN PRIME was born to carry out the mission: Taking advantage of abundant locally available raw materials to create products used in livestock have global standard, develop economic and helps farmers increase production and income.",
+      "mission": "Leveraging abundant locally available raw materials to create livestock products that meet global standards.",
+      "vision": "To become a leading company in the livestock materials sector in Vietnam and the region.",
+      "image_intro_src": "/assets/images/root/about-vinprime.jpg",
+      "values": [
+        "Exceptional Quality",
+        "Innovation & Creativity",
+        "Sustainable Development",
+        "Collaborative Growth"
+      ],
+      "established": "March 2023",
+      "foundersExperience": "Many years of experience"
+    },
+    "stats": [
+      {
+        "number": "1000+",
+        "label": "Customers"
+      },
+      {
+        "number": "50+",
+        "label": "Partners"
+      },
+      {
+        "number": "5",
+        "label": "Provinces"
+      },
+      {
+        "number": "24/7",
+        "label": "Support"
+      }
+    ]
   }
 }

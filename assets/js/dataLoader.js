@@ -10,13 +10,13 @@ async function loadSiteData() {
   }
 
   try {
-    const [site, menu] = await Promise.all([
+    const [site, menu, about] = await Promise.all([
       fetch('assets/data/siteInfo.json').then(r => r.json()),
       fetch('assets/data/menu.json').then(r => r.json()),
       fetch('assets/data/about.json').then(r => r.json())
     ]);
 
-    cachedSiteData = { site, menu };
+    cachedSiteData = { site, menu, about };
     return cachedSiteData;
   } catch (e) {
     console.error('loadSiteData error', e);
@@ -110,8 +110,7 @@ async function loadContactData() {
     };
   }
 }
-
-
+ 
 // expose globally
 window.loadSiteData = loadSiteData;
 window.loadProductsData = loadProductsData;

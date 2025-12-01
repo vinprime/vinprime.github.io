@@ -3,6 +3,7 @@ import './utils.js';
 import './header-enhancements.js';
 import './dataLoader.js';
 import './renderHeaderFooter.js';
-import './products.js';
+import './products.js'; 
+import './intro.js'; 
 import './404.js'; 
 import './app.js';
