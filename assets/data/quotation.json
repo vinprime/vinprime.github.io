@@ -1,0 +1,13 @@
+{
+  "i18nKeyTitle": "quotation.title",
+  "i18nKeySubtitle": "quotation.subtitle",
+  "form": {
+    "name": "quotation.form.name",
+    "email": "quotation.form.email",
+    "phone": "quotation.form.phone",
+    "product": "quotation.form.product",
+    "button": "quotation.form.button",
+    "success": "quotation.form.success",
+    "error": "quotation.form.error"
+  }
+}

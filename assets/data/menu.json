@@ -6,12 +6,12 @@
   },
   {
     "name": "ABOUT US",
-    "url": "about.html",
+    "url": "index.html#get-about",
     "i18nKey": "nav.about"
   },
   {
     "name": "ACTIVITES",
-    "url": "activities.html",
+    "url": "index.html#get-activities",
     "i18nKey": "nav.activities"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "name": "CONTACT US",
-    "url": "contact.html",
+    "url": "index.html#get-contact",
     "i18nKey": "nav.contact"
   } 
 ]

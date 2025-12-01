@@ -1,9 +1,12 @@
+import './favicon-loader.js';
 import './i18n.js';
 import './utils.js';
 import './header-enhancements.js';
 import './dataLoader.js';
 import './renderHeaderFooter.js';
 import './products.js'; 
+import './quotation.js'; 
 import './intro.js'; 
+import './activities.js'; 
 import './404.js'; 
 import './app.js';

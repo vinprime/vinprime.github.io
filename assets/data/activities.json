@@ -1,0 +1,42 @@
+{
+    "i18nKeyTitle": "title",
+    "i18nKeySubtitle": "subtitle",
+    "activities": [
+        {
+            "id": 1,
+            "i18nKeyTitle": "production",
+            "image": "/assets/images/activities/production.jpg",
+            "image_style": "dominant-image",
+            "details": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 2,
+            "i18nKeyTitle": "export",
+            "image": "/assets/images/activities/export.jpg",
+            "image_style": "dominant-image",
+            "details": [
+                0,
+                1,
+                2,
+                3
+            ]
+        },
+        {
+            "id": 3,
+            "i18nKeyTitle": "trading",
+            "image": "/assets/images/activities/trading.jpg",
+            "image_style": "dominant-image",
+            "details": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    ]
+}

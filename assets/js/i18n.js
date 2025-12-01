@@ -114,7 +114,9 @@ class I18n {
         // Replace parameters if any
         if (params && typeof value === 'string') {
             Object.keys(params).forEach(param => {
-                value = value.replace(`{{${param}}}`, params[param]);
+                // Support both {param} and {{param}} formats 
+                value = value.replace(new RegExp(`{{${param}}}`, 'g'), params[param]);
+                value = value.replace(new RegExp(`{${param}}`, 'g'), params[param]);
             });
         }
 
@@ -136,12 +138,24 @@ class I18n {
         elements.forEach((element, index) => {
             const key = element.getAttribute('data-i18n');
 
+            // Parse parameters if they exist
+            let params = {};
+            const paramsAttr = element.getAttribute('data-i18n-params');
+
+            if (paramsAttr) {
+                try {
+                    params = JSON.parse(paramsAttr);
+                } catch (error) {
+                    console.warn(`⚠️ Failed to parse data-i18n-params for key "${key}":`, paramsAttr, error);
+                }
+            }
+
             // Handle special syntax: [attr]key
             const match = key.match(/^\[(\w+)\](.+)$/);
 
             if (match) {
                 const [, attr, actualKey] = match;
-                const translation = this.t(actualKey);
+                const translation = this.t(actualKey, params);
 
                 // Kiểm tra translation có tồn tại không
                 if (translation !== undefined) {
@@ -149,8 +163,8 @@ class I18n {
                     console.log(`📝 Set attribute [${index}]: ${attr}="${actualKey}" ->`, translation);
                 }
             } else {
-                // Get translation
-                const translation = this.t(key);
+                // Get translation with parameters
+                const translation = this.t(key, params);
 
                 // Kiểm tra translation có phải string không
                 if (translation === undefined || translation === null) {
@@ -158,7 +172,7 @@ class I18n {
                     return;
                 }
 
-                const translationStr = String(translation); // Chuyển sang string để an toàn
+                const translationStr = String(translation);
 
                 if (translationStr === `[${key}]`) {
                     console.warn(`⚠️ Could not translate: ${key}`);
@@ -340,8 +354,22 @@ window.i18n = i18nInstance;
 console.log('✅ window.i18n assigned:', typeof window.i18n !== 'undefined');
 
 // Helper function for template literals
+// Helper function for template literals với params
 window.__ = (key, params = {}) => {
-    return window.i18n?.t(key, params) || key;
+    if (window.i18n) {
+        return window.i18n.t(key, params) || key;
+    }
+    // Nếu không có params, trả về key
+    if (Object.keys(params).length === 0) {
+        return key;
+    }
+    // Nếu có params nhưng không có i18n, format cơ bản
+    let result = key;
+    Object.keys(params).forEach(param => {
+        result = result.replace(new RegExp(`{${param}}`, 'g'), params[param]);
+        result = result.replace(new RegExp(`{{${param}}}`, 'g'), params[param]);
+    });
+    return result;
 };
 
 // Add debug info

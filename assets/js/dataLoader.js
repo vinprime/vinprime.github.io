@@ -89,29 +89,8 @@ async function loadProductsData() {
   }
 }
 
-async function loadContactData() {
-  if (cachedContactData) {
-    return cachedContactData;
-  }
-
-  try {
-    const contact = await fetch('assets/data/contact.json').then(r => r.json());
-    cachedContactData = contact;
-    return contact;
-  } catch (e) {
-    console.error('loadContactData error', e);
-
-    // Fallback data
-    return {
-      phone: '0123 456 789',
-      email: 'info@vinprime.com',
-      address: 'Địa chỉ công ty',
-      mapUrl: '#'
-    };
-  }
-}
+ 
  
 // expose globally
 window.loadSiteData = loadSiteData;
-window.loadProductsData = loadProductsData;
-window.loadContactData = loadContactData; 
+window.loadProductsData = loadProductsData; 

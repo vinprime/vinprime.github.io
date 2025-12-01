@@ -6,13 +6,13 @@
   "nav": {
     "home": "TRANG CHỦ",
     "products": "SẢN PHẨM",
-    "about": "VỀ CHÚNG TÔI", 
+    "about": "VỀ CHÚNG TÔI",
     "activities": "HOẠT ĐỘNG",
     "contact": "LIÊN HỆ",
     "hotline": "HOTLINE"
   },
   "home": {
-    "heroTitle": "VIN PRIME CO., LTDxxx",
+    "heroTitle": "VIN PRIME CO., LTD",
     "heroSub": "TẤT CẢ SẢN PHẨM TỐT NHẤT CHO TRANG TRẠI CHĂN NUÔI CỦA BẠN",
     "aboutTitle": "Về chúng tôi",
     "aboutText": "VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và nhiều ứng dụng công nghiệp khác."
@@ -41,7 +41,6 @@
     "products": "Sản phẩm",
     "about": "Giới thiệu",
     "contact": "Liên hệ",
-    
     "viewVinPrimeProducts": "Xem các sản phẩm của chúng tôi",
     "learnAboutCompany": "Tìm hiểu về công ty chúng tôi",
     "contactSupportTeam": "Liên hệ với đội ngũ hỗ trợ"
@@ -53,9 +52,151 @@
     "send": "Gửi",
     "subscribe": "Đăng ký"
   },
+  "products": {
+    "groupProducts": "Các sản phẩm trong nhóm",
+    "viewDetail": "Xem chi tiết",
+    "share": "Chia sẻ:",
+    "contact": "Liên hệ đặt hàng",
+    "downloadCatalog": "Tải catalogue",
+    "process": "Quy trình sản xuất",
+    "packaging": "Quy cách đóng gói",
+    "related": "Sản phẩm liên quan",
+    "viewAll": "Xem tất cả",
+    "highQuality": "Chất lượng cao",
+    "exportStandard": "Tiêu chuẩn xuất khẩu",
+    "title": "SẢN PHẨM CHÍNH",
+    "subtitle": "Nguyên liệu chất lượng cao cho chăn nuôi và công nghiệp",
+    "count": "{count} sản phẩm",
+    "more": "+{count} sản phẩm khác",
+    "view_all": "Xem tất cả sản phẩm",
+    "groups": {
+      "corn": {
+        "name": "NGÔ",
+        "children": [
+          "corn_silage",
+          "corn_cob_meal",
+          "corn_cob_pellet"
+        ]
+      },
+      "sawdust": {
+        "name": "MÙN CƯA",
+        "children": [
+          "pine_sawdust_block",
+          "acacia_sawdust_pellet"
+        ]
+      },
+      "others": {
+        "name": "KHÁC",
+        "children": [
+          "dried_bagasse",
+          "pineapple_silage",
+          "other"
+        ]
+      }
+    },
+    "corn_silage": "NGÔ Ủ CHUA",
+    "corn_cob_meal": "BỘT LÕI NGÔ",
+    "corn_cob_pellet": "VIÊN LÕI NGÔ",
+    "pine_sawdust_block": "KHỐI MÙN CƯA THÔNG",
+    "acacia_sawdust_pellet": "VIÊN MÙN CƯA KEO",
+    "dried_bagasse": "BÃ MÍA KHÔ",
+    "pineapple_silage": "DỨA Ủ CHUA",
+    "other": "SẢN PHẨM KHÁC",
+    "image_alts": {
+      "corn": "Hình ảnh sản phẩm từ ngô",
+      "sawdust": "Hình ảnh sản phẩm từ mùn cưa",
+      "others": "Hình ảnh sản phẩm khác"
+    },
+    "details": {
+      "corn_silage": {
+        "description": "Silage ngô là thức ăn thô xanh phổ biến cho động vật nhai lại vì giàu năng lượng, dễ tiêu hóa và dễ dàng cơ giới hóa từ khâu trồng trọt đến khi cho ăn.\n\nSilage ngô chất lượng tốt có mùi thơm nhẹ, dễ chịu với một chút mùi giấm. Màu sắc từ nâu nhạt đến xanh đậm. Nếu có màu nâu sẫm hoặc mùi trái cây lên men, mùi men, mùi cháy hoặc mùi hôi (axit butyric), điều này cho thấy đã xảy ra hiện tượng nóng lên quá mức hoặc quá trình lên men không đúng cách. Hiểu biết về quy trình ủ chua thường giải thích được lý do tại sao một số silage có chất lượng kém.\n\nQuy trình sản xuất:\n1/ THU HOẠCH\nNgô nên được thu hoạch để làm silage sau khi hạt đã vào giai đoạn chắc hạt nhưng trước khi lá chuyển nâu và khô. Sản lượng và chất lượng silage ngô đạt đỉnh điểm trong giai đoạn phát triển này. Bắp ngô đã tích lũy hầu hết giá trị dinh dưỡng tiềm năng, trong khi tổn thất từ lá và thân là rất ít. Sau giai đoạn chắc hạt, giá trị dinh dưỡng của thân và lá ngô giảm trong khi tổn thất ngoài đồng tăng.\n\n2/ LÀM KHÔ\nTrong quá trình chuẩn bị ủ chua, cỏ được để héo trên đồng trong vài giờ để giảm độ ẩm xuống khoảng 60-75% - đây là mức tối ưu. Nếu để cỏ khô quá lâu, nó có thể trở nên quá khô, hoặc bị mưa – cả hai trường hợp này đều làm giảm hiệu quả của quá trình lên men.\n\n3/ CẮT NHỎ\nSilage ngô nên được cắt thành các hạt có chiều dài từ 1/2 đến 3/4 inch. Các hạt có kích thước này sẽ đóng chặt hơn trong silo và gia súc ăn ngon miệng hơn. Silage cắt quá nhỏ có thể được xử lý bằng máy cắt lại. Điều này sẽ làm tăng lượng vật chất khô có thể được lưu trữ trong silo.\n\n4/ LÊN MEN\nNén chặt cỏ để đẩy oxy ra ngoài hiệu quả hơn. Điều này rất quan trọng vì các vi sinh vật, đặc biệt là vi khuẩn axit lactic, phát triển tốt nhất trong điều kiện kỵ khí (không có oxy). Khi còn oxy, các enzyme thực vật và vi khuẩn khác phản ứng với đường và protein thực vật để tạo ra năng lượng, từ đó làm giảm lượng chất dinh dưỡng trong sản phẩm cuối cùng.\n\nQuy cách đóng gói: Jumbo bag 650kg x 40 bao (26MT)/40 HC",
+        "images": [
+          "/assets/images/products/corn_silage_1.jpg",
+          "/assets/images/products/corn_silage_2.jpg"
+        ]
+      },
+      "corn_cob_meal": {
+        "description": "Bột lõi ngô là một loại phân bón hữu cơ được làm từ lõi ngô khô và nghiền nhỏ. Nó chủ yếu được sử dụng làm thức ăn cho gia súc và vật nuôi khác, đồng thời làm giá thể trồng nấm. Được sử dụng đặc biệt cho sản xuất nấm (tất cả các loại) và làm thức ăn chăn nuôi, bao gồm bò, lợn, dê, gà và nhiều loại khác.\n\nQuy trình sản xuất:\n1/ THU HOẠCH\nLõi ngô được mua từ các hộ gia đình và vận chuyển về nhà máy. Lõi ngô được làm khô và nghiền để sản xuất bột lõi ngô.\n\n2/ NGHIỀN\nCác bước sản xuất bao gồm sấy khô lõi ngô, tách hạt khỏi lõi, sấy lõi và nghiền lõi bằng máy.\n\n3/ HOÀN THIỆN\nSau khi nghiền, lõi ngô được làm khô, đóng vào bao PP, xếp lên pallet và đóng vào container 40'HC để kéo ra cảng xuất khẩu.\n\nQuy cách đóng gói: PP bags 30kg x 840 bao (25.2MT)/40 HC",
+        "images": [
+          "/assets/images/products/corn_cob_meal_1.jpg"
+        ]
+      },
+      "corn_cob_pellet": {
+        "description": "Viên nén lõi ngô được làm từ các phần phế phẩm của ngô như vỏ ngô, lõi ngô. Các nguyên liệu này sẽ được loại bỏ nhiệt, sấy khô và sản xuất thành viên nén ngô.\n\nQuy trình sản xuất:\n1/ THU HOẠCH\nLõi ngô được mua từ các hộ gia đình và vận chuyển về nhà máy. Lõi ngô mua về phải có độ ẩm khoảng 12-15% để có thể đưa vào ép thành khối. Đối với lõi ngô có độ ẩm cao hơn, cần phải qua hệ thống sấy để đạt độ ẩm như trên.\n\n2/ ÉP\nSau khi đạt độ ẩm quy định, lõi ngô sẽ được đưa lên băng tải vào miệng nạp nguyên liệu của máy ép khối. Sau đó nguyên liệu sẽ được nén với áp suất cao để sản xuất ra bã ngô ép khối.\n\n3/ HOÀN THIỆN\nSau khi thành phẩm là các khối bã ngô ép, chúng sẽ được xếp vào jumbo bag, đặt lên pallet và đóng vào container 40'HC để kéo ra cảng xuất khẩu.\n\nQuy cách đóng gói: Jumbo bag 650kg x 40 bao (26 MT)/40HC",
+        "images": [
+          "/assets/images/products/corn_cob_pellet_1.jpg"
+        ]
+      },
+      "pine_sawdust_block": {
+        "description": "Mùn cưa gỗ thông là một loại vật liệu hữu cơ có nguồn gốc từ các ngành sản xuất và chế biến gỗ. Mùn cưa gỗ thông khá hữu ích cho canh tác nông nghiệp và làm lớp lót chuồng cho vật nuôi. Sau một thời gian dài sử dụng, mùn cưa gỗ thông giúp bổ sung thêm dinh dưỡng cho đất khô cứng. Ngoài ra, mùn cưa gỗ thông còn mang lại cho vật nuôi một môi trường sống sạch sẽ và thoải mái.\n\nQuy trình sản xuất:\n1/ THU GOM\nThu mua mùn cưa gỗ thông: mua và vận chuyển về nhà máy.\n\n2/ LÀM SẠCH\nLàm sạch mùn cưa gỗ thông: Ngâm mùn cưa gỗ thông trong nước vôi để cân bằng độ PH trong đất và loại bỏ mầm bệnh tốt hơn.\n\n3/ Ủ\nỦ đất với mùn cưa đã xử lý: Trộn mùn cưa vào đất và sau đó phơi hỗn hợp dưới nắng trong 2-3 ngày để diệt sâu bệnh trong đất.\n\nQuy cách đóng gói: Jumbo bag 570 - 600kg x 40 bao (23-24MT)/40 HC",
+        "images": [
+          "/assets/images/products/pine_sawdust_block_1.jpg"
+        ]
+      },
+      "acacia_sawdust_pellet": {
+        "description": "Mùn cưa keo được tạo ra bằng cách cắt, nghiền, khoan, chà nhám hoặc làm nhỏ gỗ keo tự nhiên bằng cưa hoặc các công cụ khác. Nó bao gồm các hạt gỗ mịn. Mùn cưa keo được sử dụng rộng rãi trong nông nghiệp, đặc biệt là trong trồng nấm. Ngoài ra, mùn cưa cây keo có đặc tính giữ ẩm tuyệt vời, giúp giảm sự bay hơi và duy trì nhiệt độ đất. Gần đây, mùn cưa keo đã trở thành một thành phần phổ biến trong thức ăn chăn nuôi. Lý do là mùn cưa keo trải qua giai đoạn chế biến đơn giản loại bỏ các tạp chất không tốt cho sức khỏe động vật.\n\nQuy trình sản xuất:\n1/ THU GOM\nThu mua mùn cưa gỗ keo: Mua và vận chuyển về nhà máy.\n\n2/ NGHIỀN NHỎ\nNghiền các thành phần có kích thước lớn. Các nguyên liệu có kích thước lớn sẽ được đưa vào hệ thống nghiền để nghiền thành các mảnh mùn cưa có kích thước phù hợp (<5mm thường là tiêu chuẩn chung).\n\n3/ CÂN BẰNG ĐỘ ẨM VÀ ÉP VIÊN\nCân bằng độ ẩm cho mùn cưa. Ép viên mùn cưa gỗ keo.\n\n4/ LÀM NGUỘI VÀ HOÀN THIỆN\nViên mùn cưa sau khi qua máy ép sẽ được đưa trực tiếp vào băng tải làm nguội. Sau khi làm nguội, thành phẩm sẽ được đóng vào jumbo bag, xếp lên pallet và đóng vào container 40'HC để kéo ra cảng xuất khẩu.\n\nQuy cách đóng gói: Jumbo bag 650kg x 40 bao (26MT)/40HC",
+        "images": [
+          "/assets/images/products/acacia_sawdust_pellet_1.jpg"
+        ]
+      }
+    }
+  },
+  "quotation": {
+    "title": "NHẬN BÁO GIÁ",
+    "subtitle": "Nhận giá tốt nhất cho sản phẩm chất lượng cao của chúng tôi",
+    "form": {
+      "name": "HỌ TÊN",
+      "email": "EMAIL",
+      "phone": "SỐ ĐIỆN THOẠI",
+      "product": "SẢN PHẨM",
+      "select_product": "Chọn sản phẩm",
+      "button": "GỬI NGAY",
+      "sending": "Đang gửi...",
+      "success": "Cảm ơn! Chúng tôi sẽ liên hệ với bạn sớm.",
+      "error": "Đã xảy ra lỗi. Vui lòng thử lại."
+    }
+  },
+  "activities": {
+    "title": "LĨNH VỰC HOẠT ĐỘNG",
+    "subtitle": "Chuyên nghiệp trong từng khâu sản xuất và phân phối",
+    "data": {
+      "trading": {
+        "title": "GIAO DỊCH THƯƠNG MẠI",
+        "description": "Phân phối và thương mại nguyên liệu chuyên nghiệp, uy tín trên toàn quốc.",
+        "details": [
+          "Xuất khẩu sang 20+ quốc gia",
+          "Đạt tiêu chuẩn quốc tế",
+          "Đóng gói chuyên nghiệp",
+          "Hỗ trợ hải quan trọn gói"
+        ]
+      },
+      "export": {
+        "title": "XUẤT KHẨU",
+        "description": "Xuất khẩu sản phẩm đến các thị trường khó tính với chất lượng vượt trội.",
+        "details": [
+          "Xuất khẩu sang 20+ quốc gia",
+          "Đạt tiêu chuẩn quốc tế",
+          "Đóng gói chuyên nghiệp",
+          "Hỗ trợ hải quan trọn gói"
+        ]
+      },
+      "production": {
+        "title": "SẢN XUẤT",
+        "description": "Sản xuất nguyên liệu chất lượng cao với công nghệ hiện đại, đạt chuẩn quốc tế.",
+        "details": [
+          "Mạng lưới phân phối rộng khắp",
+          "Hệ thống đại lý chính thức",
+          "Giao hàng nhanh chóng",
+          "Hỗ trợ kỹ thuật 24/7"
+        ]
+      }
+    }
+  },
   "about": {
     "about": {
       "title": "Về VinPrime",
+      "image-overlay-title": "TINH HOA TỪ NGUYÊN LIỆU VIỆT",
+      "image-overlay-subtitle": "Chất lượng quốc tế - Giá trị địa phương",
       "description": "Được thành lập vào tháng 3 năm 2023, với kiến thức tích lũy từ nhiều năm kinh nghiệm của các Nhà sáng lập, VIN PRIME ra đời để thực hiện sứ mệnh: Tận dụng nguyên liệu tại chỗ phong phú sẵn có để tạo ra các sản phẩm sử dụng trong chăn nuôi đạt tiêu chuẩn toàn cầu, phát triển kinh tế và giúp nông dân tăng sản lượng và thu nhập.",
       "mission": "Tận dụng nguyên liệu tại chỗ phong phú sẵn có để tạo ra các sản phẩm sử dụng trong chăn nuôi đạt tiêu chuẩn toàn cầu.",
       "vision": "Trở thành công ty hàng đầu trong lĩnh vực nguyên liệu chăn nuôi tại Việt Nam và khu vực.",
@@ -87,5 +228,9 @@
         "label": "Hỗ trợ"
       }
     ]
+  },
+  "misc": {
+    "view_details": "Xem Chi Tiết",
+    "contact": "Liên hệ đặt hàng"
   }
 }

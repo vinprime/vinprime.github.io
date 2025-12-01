@@ -52,9 +52,151 @@
     "send": "Send",
     "subscribe": "Subscribe"
   },
+  "products": {
+    "groupProducts": "Products in group",
+    "viewDetail": "View Details",
+    "share": "Share:",
+    "contact": "Contact for Order",
+    "downloadCatalog": "Download Catalog",
+    "process": "Production Process",
+    "packaging": "Packaging Specifications",
+    "related": "Related Products",
+    "viewAll": "View All",
+    "highQuality": "High Quality",
+    "exportStandard": "Export Standard",
+    "title": "MAIN PRODUCTS",
+    "subtitle": "High-quality raw materials for livestock and industry",
+    "count": "{count} products",
+    "more": "+{count} more products",
+    "view_all": "View all products",
+    "groups": {
+      "corn": {
+        "name": "CORN",
+        "children": [
+          "corn_silage",
+          "corn_cob_meal",
+          "corn_cob_pellet"
+        ]
+      },
+      "sawdust": {
+        "name": "SAWDUST",
+        "children": [
+          "pine_sawdust_block",
+          "acacia_sawdust_pellet"
+        ]
+      },
+      "others": {
+        "name": "OTHERS",
+        "children": [
+          "dried_bagasse",
+          "pineapple_silage",
+          "other"
+        ]
+      }
+    },
+    "corn_silage": "CORN SILAGE",
+    "corn_cob_meal": "CORN COB MEAL",
+    "corn_cob_pellet": "CORN COB PELLET",
+    "pine_sawdust_block": "PINE SAWDUST BLOCK",
+    "acacia_sawdust_pellet": "ACACIA SAWDUST PELLET",
+    "dried_bagasse": "DRIED BAGASSE",
+    "pineapple_silage": "PINEAPPLE SILAGE",
+    "other": "OTHER",
+    "image_alts": {
+      "corn": "Corn products image",
+      "sawdust": "Sawdust products image",
+      "others": "Other products image"
+    },
+    "details": {
+      "corn_silage": {
+        "description": "Corn silage is a popular forage for ruminant animals because it is high in energy and digestibility and is easily adapted to mechanization from the stand-crop to time of feeding.\n\nCorn silage should have a light, pleasant smell with only a slight vinegar odor. It should be slightly brown to dark green. If it is dark brown or has an odor that is fruity, yeasty, burnt or rancid (butyric acid), excessive heating or improper fermentation has occurred. Knowledge of the silage process often explains why some silage may be of poor quality.\n\nProcess:\n1/ HARVESTING\nCorn should be harvested for silage after the ear is well dented but before the leaves turn brown and dry. The quantity and quality of corn silage are at their peak in this stage of development. The ear has accumulated most of its potential feeding value, but there has been little loss from the leaves and stalks. After the dent stage, feeding value of corn stalks and leaves decreases while field losses increase.\n\n2/ DRYING\nDuring Silage preparation, the grass is allowed to wilt in the field for a few hours to reduce the moisture content to around 60-75% as this is the optimum level. If the grass is left out longer, it may get too dry, or it may get rained on – and both these will reduce the efficiency of the fermentation.\n\n3/ CUTTING\nCorn silage should be cut into particles 1/2 to 3/4 inches in length. Particles of this size will pack more firmly in the silo and are more palatable to cattle. Very finely cut silage may be made with a recutter. This will increase the amount of dry matter that can be stored in a silo.\n\n4/ FERMENTATION\nCompress the grass to eject the oxygen more efficiently. This is important because the microorganisms especially, lactic acid bacteria, grow best under anaerobic (oxygen-free) conditions. When oxygen remains, plant enzymes and other bacteria react with the plant sugars and proteins to make energy, thus reducing the amount of nutrients in the final product.\n\nPacking style: Jumbo bag 650kg x 40 bags (26MT)/40 HC",
+        "images": [
+          "/assets/images/products/corn_silage_1.jpg",
+          "/assets/images/products/corn_silage_2.jpg"
+        ]
+      },
+      "corn_cob_meal": {
+        "description": "Corn cob meal is a fertilizer made from dried and ground corn cobs. It is mainly used as feed for cattle and other livestock and as a culture medium for mushroom. Use especifically for mushroom production, including all varieties, and for feeding livestock, including cattle, pigs, goats, chickens and many more.\n\nProcess:\n1/ HARVESTING\nCorn cobs are purchased from relatives and brought to the factory. Corn cobs are dried and crushed to produce corn cob meal.\n\n2/ CRUSHING\nIts production steps include drying the corn cob, separating the corn from the cob, drying the cob, crushing the cob with a machine.\n\n3/ COMPLETING\nAfter the crushing, drying the cob and putting into a PP bag, placed on pallets and packed into 40'HC containers to be pulled to the port of export.\n\nPacking style: PP bags 30kg x 840 bags (25.2MT)/40 HC",
+        "images": [
+          "/assets/images/products/corn_cob_meal_1.jpg"
+        ]
+      },
+      "corn_cob_pellet": {
+        "description": "Corn pellets are made from discarded parts of corn such as corn husks, cobs. These materials will be deheated, dried and produced into corn pellets.\n\nProcess:\n1/ HARVESTING\nCorn cobs are purchased from relatives and brought to the factory. The purchased corn cob must have a moisture content of about 12-15% to be able to be put into press into cubes. For corn cob with higher humidity, it is necessary to go through the dryer system to dry to reach the above moisture content.\n\n2/ PRESSING\nAfter reaching the specified humidity, corn cob will be put on the conveyor belt into the raw material intake mouth of the block press. Then the material will be compressed with high pressure to produce pressed corn pulp.\n\n3/ COMPLETING\nAfter the finished product is pressed corn pulp blocks, they will be folded into jumbo bags, placed on pallets and packed into 40'HC containers to be pulled to the port of export.\n\nPacking style: Jumbo bag 650kg x 40 bags (26 MT)/40HC",
+        "images": [
+          "/assets/images/products/corn_cob_pellet_1.jpg"
+        ]
+      },
+      "pine_sawdust_block": {
+        "description": "Pine wood sawdust is a type of organic material that comes from the manufacturing and processing sectors. For farming and animal bedding, pine wood sawdust is quite useful. After a lengthy period of planting, pine wood sawdust enriches dry, hard soil with more nutrients. Additionally, pine wood sawdust gives the animal a tidy and cozy environment to live.\n\nProcess:\n1/ COLLECTING\nGet pine wood sawdust: purchase and bring to the factory.\n\n2/ CLEANING\nClean the pine wood sawdust: Soak the pine wood sawdust in lime water to balance PH in the soil and eliminate pathogens better.\n\n3/ CULTIVATING\nCultivate the soil with processed sawdust: Mix the sawdust into the soil and then let the mixture sunbathe in 2-3 days to kill the pests in the soil.\n\nPacking style: Jumbo bag 570 - 600kg x 40 bags (23-24MT)/40 HC",
+        "images": [
+          "/assets/images/products/pine_sawdust_block_1.jpg"
+        ]
+      },
+      "acacia_sawdust_pellet": {
+        "description": "Acacia sawdust is made by cutting, grinding, drilling, sanding, or otherwise pulverizing natural acacia wood with saws or other tools. It consists of fine particles of wood. Acacia sawdust is widely used in agriculture, especially in mushroom cultivation. In addition, acacia tree sawdust has excellent moisture retention properties, which helps reduce evaporation and maintain soil temperature. Acacia sawdust has recently become a common ingredient in animal feed. The reason is that acacia sawdust undergoes a simple processing stage that removes impurities that are not good for the animal's health.\n\nProcess:\n1/ COLLECTING\nGet acacia wood sawdust: purchase and bring to the factory.\n\n2/ CRUSHING\nCrushing large-sized ingredients. These large-sized materials will be fed into the grinding system to grind into suitably sized pieces of sawdust (<5mm is usually the general standard).\n\n3/ MOISTURE BALANCE AND PELLETIZING\nMoisture balance for sawdust. Acacia wood sawdust pellet compression.\n\n4/ COOLING AND COMPLETING\nCool - Sawdust pellets after passing through the compressor will be winch directly into the conveyor cooler. After cooling, the finished product will be put in giant bag, placed on pallets and packed into 40'HC containers to be pulled to the port of export.\n\nPacking style: Jumbo bag 650kg x 40 bags (26MT)/40HC",
+        "images": [
+          "/assets/images/products/acacia_sawdust_pellet_1.jpg"
+        ]
+      }
+    }
+  },
+  "quotation": {
+    "title": "GET QUOTATION",
+    "subtitle": "Get the best price for our high-quality products",
+    "form": {
+      "name": "NAME",
+      "email": "EMAIL",
+      "phone": "PHONE NUMBER",
+      "product": "PRODUCT",
+      "select_product": "Select a product",
+      "button": "SEND NOW",
+      "sending": "Sending...",
+      "success": "Thank you! We will contact you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "activities": {
+    "title": "ACTIVITES",
+    "subtitle": "Professionalism in Every Step of Production and Distribution",
+    "data": {
+      "trading": {
+        "title": "TRADING",
+        "description": "Professional and reputable nationwide distribution and trading of raw materials.",
+        "details": [
+          "Modern production lines",
+          "GMP & ISO certified",
+          "Rigorous quality control",
+          "Clean and safe raw materials"
+        ]
+      },
+      "export": {
+        "title": "EXPORT",
+        "description": "Exporting products to demanding markets with superior quality standards.",
+        "details": [
+          "Exporting to 20+ countries",
+          "Compliant with international standards",
+          "Professional packaging",
+          "Comprehensive customs support"
+        ]
+      },
+      "production": {
+        "title": "PRODUCTION",
+        "description": "Manufacturing high-quality raw materials using modern technology, meeting international standards.",
+        "details": [
+          "Nationwide distribution network",
+          "Official dealer/agent system",
+          "Fast and reliable delivery",
+          "24/7 technical support"
+        ]
+      }
+    }
+  },
   "about": {
     "about": {
       "title": "About VinPrime",
+      "image-overlay-title": "ESSENCE FROM VIETNAMESE INGREDIENTS",
+      "image-overlay-subtitle": "International Quality - Local Value",
       "description": "Established in March 2023, with the knowledge accumulated from many years of experience of the Founders, VIN PRIME was born to carry out the mission: Taking advantage of abundant locally available raw materials to create products used in livestock have global standard, develop economic and helps farmers increase production and income.",
       "mission": "Leveraging abundant locally available raw materials to create livestock products that meet global standards.",
       "vision": "To become a leading company in the livestock materials sector in Vietnam and the region.",
@@ -86,5 +228,9 @@
         "label": "Support"
       }
     ]
+  },
+  "misc": {
+    "view_details": "View Details",
+    "contact": "Contact us"
   }
 }

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-i18n="site.name">VinPrime - Chi tiết sản phẩm</title>
+    <meta name="description" content="Chi tiết sản phẩm nguyên liệu chăn nuôi VinPrime">
+    
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/pages/product-group-detail.css" as="style">
+    <link rel="preload" href="assets/js/utils.js" as="script">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages/product-group-detail.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading progress bar -->
+    <div class="loading-progress" id="loadingProgress"></div>
+
+    <header></header>
+
+    <main class="container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" id="product-breadcrumb" aria-label="breadcrumb">
+            <!-- Dynamic breadcrumb will be loaded here -->
+        </nav>
+
+        <!-- Skeleton loading -->
+        <div class="product-loading skeleton-loading active">
+            <div class="product-gallery-skeleton skeleton-item skeleton-pulse"></div>
+            <div class="product-info-skeleton">
+                <div class="title-skeleton skeleton-item skeleton-pulse short"></div>
+                <div class="text-skeleton skeleton-item skeleton-pulse medium"></div>
+                <div class="text-skeleton skeleton-item skeleton-pulse long"></div>
+                <div class="text-skeleton skeleton-item skeleton-pulse medium"></div>
+                <div class="process-skeleton">
+                    <div class="process-step skeleton-item skeleton-pulse"></div>
+                    <div class="process-step skeleton-item skeleton-pulse"></div>
+                    <div class="process-step skeleton-item skeleton-pulse"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Detail Content -->
+        <div class="product-group-detail-content" style="display: none;">
+            <div class="product-group-detail-container">
+                <!-- Left: Image Gallery -->
+                <div class="product-group-gallery" data-aos="fade-right">
+                    <div class="main-image-container">
+                        <div class="swiper main-image-swiper">
+                            <div class="swiper-wrapper" id="main-image-slides">
+                                <!-- Main images will be loaded here -->
+                            </div>
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="thumbnail-container">
+                        <div class="swiper thumbnail-swiper">
+                            <div class="swiper-wrapper" id="thumbnail-slides">
+                                <!-- Thumbnails will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Information -->
+                <div class="product-info" data-aos="fade-left">
+                    <div class="product-header"> 
+                        <h1 class="product-title" id="product-title"></h1>
+                        <div class="product-badges">
+                            <span class="badge high-quality" data-i18n="products.highQuality">Chất lượng cao</span>
+                            <span class="badge export" data-i18n="products.exportStandard">Tiêu chuẩn xuất khẩu</span>
+                        </div>
+                    </div>
+
+                    <div class="product-description" id="product-description">
+                        <!-- Description loaded from JSON -->
+                    </div>
+
+                    <div class="product-process">
+                        <h2><i class="fas fa-industry"></i> <span data-i18n="products.process">Quy trình sản xuất</span></h2>
+                        <div class="process-steps" id="process-steps">
+                            <!-- Process steps loaded from JSON -->
+                        </div>
+                    </div>
+
+                    <div class="product-packaging">
+                        <h2><i class="fas fa-box"></i> <span data-i18n="products.packaging">Quy cách đóng gói</span></h2>
+                        <p class="packing-info" id="packing-info"></p>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-contact" onclick="window.location.href='contact.html'">
+                            <i class="fas fa-envelope"></i>
+                            <span data-i18n="products.contact">Liên hệ đặt hàng</span>
+                        </button>
+                        <button class="btn btn-secondary btn-catalog" onclick="window.open('assets/catalog.pdf')">
+                            <i class="fas fa-download"></i>
+                            <span data-i18n="products.downloadCatalog">Tải catalogue</span>
+                        </button>
+                    </div>
+
+                    <div class="product-share">
+                        <span data-i18n="products.share">Chia sẻ:</span>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-btn zalo"><i class="fab fa-zalo"></i></a>
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-btn link" id="copy-link"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products" data-aos="fade-up">
+                <div class="section-header">
+                    <h2><i class="fas fa-layer-group"></i> <span data-i18n="products.related">Sản phẩm liên quan</span></h2>
+                    <a href="products.html" class="view-all" data-i18n="products.viewAll">Xem tất cả</a>
+                </div>
+                <div class="related-products-grid" id="related-products">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/product-group-detail.js"></script>
+</body>
+
+</html>

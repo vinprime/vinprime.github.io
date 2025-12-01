@@ -1,3 +1,5 @@
+// assets/js/utils.js
+
 // ===== LOADING UTILITIES =====
 class LoadingManager {
     constructor() {
@@ -66,4 +68,81 @@ class LoadingManager {
 }
 
 // Khởi tạo loading manager
-window.LoadingManager = new LoadingManager();
+const loadingManager = new LoadingManager();
+
+ 
+// ===== EXPORT LOADING FUNCTIONS =====
+export const showLoading = () => {
+    loadingManager.showLoading();
+};
+
+export const hideLoading = () => {
+    loadingManager.hideLoading();
+};
+
+export const showError = (message) => {
+    loadingManager.showError(message);
+};
+
+// ===== OTHER UTILITIES =====
+export const debounce = (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+};
+
+export const formatNumber = (num) => {
+    return new Intl.NumberFormat('vi-VN').format(num);
+};
+
+export const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+};
+
+export const isMobile = () => {
+    return window.innerWidth <= 768;
+};
+
+export const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+
+export const getQueryParam = (param) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+};
+
+// ===== EVENT LISTENERS =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Thêm loading screen cho toàn bộ trang
+    if (!document.querySelector('.skeleton-loading')) {
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+            const skeletonDiv = document.createElement('div');
+            skeletonDiv.className = 'skeleton-loading active';
+            skeletonDiv.innerHTML = `
+                <div class="skeleton-item skeleton-pulse" style="height: 300px; margin-bottom: 20px;"></div>
+                <div class="skeleton-item skeleton-pulse" style="height: 20px; width: 80%; margin-bottom: 10px;"></div>
+                <div class="skeleton-item skeleton-pulse" style="height: 20px; width: 60%; margin-bottom: 10px;"></div>
+            `;
+            mainContent.prepend(skeletonDiv);
+        }
+    }
+    
+    // Ẩn loading sau khi tất cả nội dung đã load
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            hideLoading();
+        }, 500);
+    });
+});
