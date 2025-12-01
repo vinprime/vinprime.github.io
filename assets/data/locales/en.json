@@ -1,0 +1,55 @@
+{
+  "site": {
+    "name": "VinPrime",
+    "slogan": "Clean materials for livestock farming"
+  },
+  "nav": {
+    "home": "HOME",
+    "products": "PRODUCTS",
+    "about": "ABOUT US",
+    "activities": "ACTIVITES",
+    "contact": "CONTACT US",
+    "hotline": "HOTLINE"
+  },
+  "home": {
+    "heroTitle": "VIN PRIME CO., LTD",
+    "heroSub": "ALL THE BEST PRODUCTS FOR YOUR LIVESTOCK FARMING",
+    "aboutTitle": "About Us",
+    "aboutText": "VinPrime provides clean materials for livestock farming, pellet production, mushroom cultivation, and many other industrial applications."
+  },
+  "footer": {
+    "email": "Email",
+    "hotline": "Hotline",
+    "contact": "Contact Information",
+    "workingHours": "Working Hours",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "sitemap": "Sitemap",
+    "rights": "All rights reserved",
+    "connect": "Connect with us",
+    "tax": "Tax Code"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "message": "Sorry, the page you are looking for does not exist or has been moved.",
+    "goHome": "Go to Homepage",
+    "goBack": "Go Back",
+    "contactSupport": "Contact Support",
+    "searchPlaceholder": "Search for products, services...",
+    "searchButton": "Search",
+    "suggestions": "You may want to see:",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact",
+    "viewVinPrimeProducts": "View VinPrime Products",
+    "learnAboutCompany": "Learn About Our Company",
+    "contactSupportTeam": "Contact Our Support Team"
+  },
+  "buttons": {
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "send": "Send",
+    "subscribe": "Subscribe"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "site": {
+    "name": "VinPrime",
+    "slogan": "Nguyên liệu sạch cho chăn nuôi"
+  },
+  "nav": {
+    "home": "TRANG CHỦ",
+    "products": "SẢN PHẨM",
+    "about": "VỀ CHÚNG TÔI", 
+    "activities": "HOẠT ĐỘNG",
+    "contact": "LIÊN HỆ",
+    "hotline": "HOTLINE"
+  },
+  "home": {
+    "heroTitle": "VIN PRIME CO., LTDxxx",
+    "heroSub": "TẤT CẢ SẢN PHẨM TỐT NHẤT CHO TRANG TRẠI CHĂN NUÔI CỦA BẠN",
+    "aboutTitle": "Về chúng tôi",
+    "aboutText": "VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và nhiều ứng dụng công nghiệp khác."
+  },
+  "footer": {
+    "email": "Email",
+    "hotline": "Hotline",
+    "contact": "Thông tin liên hệ",
+    "workingHours": "Giờ làm việc",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "sitemap": "Sơ đồ trang",
+    "rights": "Bảo lưu mọi quyền",
+    "connect": "Kết nối với chúng tôi",
+    "tax": "MST"
+  },
+  "404": {
+    "title": "Trang không tìm thấy",
+    "message": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.",
+    "goHome": "Về trang chủ",
+    "goBack": "Quay lại",
+    "contactSupport": "Liên hệ hỗ trợ",
+    "searchPlaceholder": "Tìm kiếm sản phẩm, dịch vụ...",
+    "searchButton": "Tìm kiếm",
+    "suggestions": "Có thể bạn muốn xem:",
+    "products": "Sản phẩm",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    
+    "viewVinPrimeProducts": "Xem các sản phẩm của VinPrime / View VinPrime Products",
+    "learnAboutCompany": "Tìm hiểu về công ty chúng tôi / Learn About Our Company",
+    "contactSupportTeam": "Liên hệ với đội ngũ hỗ trợ / Contact Our Support Team"
+  },
+  "buttons": {
+    "viewAll": "Xem tất cả",
+    "readMore": "Xem thêm",
+    "contactUs": "Liên hệ ngay",
+    "send": "Gửi",
+    "subscribe": "Đăng ký"
+  }
+}

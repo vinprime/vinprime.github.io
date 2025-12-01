@@ -2,10 +2,10 @@
 @import url('base.css');
 @import url('animations.css');
 @import url('animations-loading.css');
-@import url('aos.css');
-
+@import url('aos.css'); 
 /* ===== COMPONENTS ===== */ 
 @import url('components/header-desktop.css');
 @import url('components/header-mobile.css'); 
 @import url('components/footer-desktop.css');
 @import url('components/footer-mobile.css'); 
+@import url('components/language-switcher.css'); 
