@@ -4,49 +4,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>VinPrime</title>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/pages/home.css">
+    <title>VinPrime - Nguyên liệu sạch cho chăn nuôi</title>
+    <meta name="description" content="VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và ứng dụng công nghiệp">
+    
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/pages/index.css" as="style">
+    <link rel="preload" href="assets/js/utils.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages/index.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Loading progress bar (optional) -->
+    <div class="loading-progress" id="loadingProgress"></div>
+    
     <header></header>
 
-
     <main class="container">
-        <section class="hero" data-animate="fade-up">
-            <div class="hero-inner">
-                <h1 class="hero-title">VIN PRIME CO., LTD</h1>
-                <p class="hero-sub">ALL THE BEST PRODUCTS FOR YOUR LIVESTOCK FARMING</p>
+        <!-- Skeleton loading cho nội dung -->
+        <div class="content-loading skeleton-loading active">
+            <div class="hero-skeleton skeleton-item skeleton-pulse"></div>
+            
+            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse short"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse medium"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse long"></div>
+            
+            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
+            <div class="products-skeleton-grid">
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
             </div>
-        </section>
+        </div>
 
+        <!-- Nội dung thực tế -->
+        <div class="real-content" style="display: none;">
+            <section class="hero" data-aos="fade-up">
+                <div class="hero-inner">
+                    <h1 class="hero-title">VIN PRIME CO., LTD</h1>
+                    <p class="hero-sub">ALL THE BEST PRODUCTS FOR YOUR LIVESTOCK FARMING</p>
+                </div>
+            </section>
 
-        <section class="intro" data-animate="fade-up">
-            <h2>Về chúng tôi</h2>
-            <p>VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và nhiều ứng dụng công
-                nghiệp khác.</p>
-        </section>
+            <section class="intro" data-aos="fade-up">
+                <h2>Về chúng tôi</h2>
+                <p>VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và nhiều ứng dụng công nghiệp khác.</p>
+            </section>
 
-
-        <section class="featured product-list" id="home-products" data-animate="fade-up">
-            <!-- products.js will render featured products here -->
-        </section>
+            <section class="featured product-list" id="home-products" data-aos="fade-up">
+                <!-- products.js sẽ render sản phẩm nổi bật -->
+            </section>
+        </div>
     </main>
-
 
     <footer></footer>
 
-
+    <!-- JavaScript -->
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/dataLoader.js"></script>
     <script src="assets/js/renderHeaderFooter.js"></script>
     <script src="assets/js/products.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/aos.js"></script>
 </body>
 
 </html>

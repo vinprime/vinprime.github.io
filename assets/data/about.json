@@ -1,0 +1,34 @@
+{
+  "about": {
+    "title": "Về VinPrime",
+    "description": "Được thành lập vào tháng 3 năm 2023, với kiến thức tích lũy từ nhiều năm kinh nghiệm của các Nhà sáng lập, VIN PRIME ra đời để thực hiện sứ mệnh: Tận dụng nguyên liệu tại chỗ phong phú sẵn có để tạo ra các sản phẩm sử dụng trong chăn nuôi đạt tiêu chuẩn toàn cầu, phát triển kinh tế và giúp nông dân tăng sản lượng và thu nhập.",
+    "mission": "Tận dụng nguyên liệu tại chỗ phong phú sẵn có để tạo ra các sản phẩm sử dụng trong chăn nuôi đạt tiêu chuẩn toàn cầu.",
+    "vision": "Trở thành công ty hàng đầu trong lĩnh vực nguyên liệu chăn nuôi tại Việt Nam và khu vực.",
+    "values": [
+      "Chất lượng vượt trội",
+      "Đổi mới sáng tạo",
+      "Phát triển bền vững",
+      "Hợp tác cùng phát triển"
+    ],
+    "established": "March 2023",
+    "foundersExperience": "nhiều năm kinh nghiệm"
+  },
+  "stats": [
+    {
+      "number": "1000+",
+      "label": "Khách hàng"
+    },
+    {
+      "number": "50+",
+      "label": "Đối tác"
+    },
+    {
+      "number": "5",
+      "label": "Tỉnh thành"
+    },
+    {
+      "number": "24/7",
+      "label": "Hỗ trợ"
+    }
+  ]
+}

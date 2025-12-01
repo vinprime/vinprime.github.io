@@ -1,0 +1,46 @@
+.hero {
+    width: 100%;
+    height: 50vh; 
+    /* Thêm nhiều fallback options */
+    background: 
+        url('/assets/images/root/hero.jpg') center/cover no-repeat, 
+        linear-gradient(135deg, #bbbbbb 0%, #585858 100%); /* Màu fallback */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    
+    /* Debug border để thấy kích thước section */
+    /* border: 2px solid red; */
+}
+
+/* Overlay mờ để chữ nổi bật */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.24); /* chỉnh độ tối */
+}
+
+/* Nội dung nằm trên overlay */
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    /* background: red; */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    letter-spacing: 2px;
+}
+
+.hero-sub {
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
