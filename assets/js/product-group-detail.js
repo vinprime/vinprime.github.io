@@ -122,19 +122,21 @@ class ProductGroupDetail {
         // Ẩn các phần không cần thiết cho trang nhóm
         const descriptionEl = document.getElementById('product-description');
         const processEl = document.querySelector('.product-process');
-        const packagingEl = document.querySelector('.product-packaging');
-        const actionsEl = document.querySelector('.product-actions');
-        const shareEl = document.querySelector('.product-share');
+        const packagingEl = document.querySelector('.product-packaging'); 
 
-        if (descriptionEl) descriptionEl.style.display = 'none';
-        if (processEl) processEl.style.display = 'none';
-        if (packagingEl) packagingEl.style.display = 'none';
-        if (actionsEl) actionsEl.style.display = 'none';
-        if (shareEl) shareEl.style.display = 'none';
+        if (descriptionEl) if (descriptionEl) {
+            descriptionEl.innerHTML = `<span>${this.groupData.description}</span>`;
+        } 
+        if (processEl) if (processEl) {
+            processEl.innerHTML = `<span>${this.groupData.process_steps}</span>`;
+        }
+        if (packagingEl) if (packagingEl) {
+            packagingEl.innerHTML = `<span>${this.groupData.packing}</span>`;
+        }  
 
         // Ẩn gallery
-        // const galleryEl = document.querySelector('.product-gallery');
-        // if (galleryEl) galleryEl.style.display = 'none';
+        const galleryEl = document.querySelector('.product-gallery');
+        if (galleryEl) galleryEl.style.display = 'none';
 
         // Thay đổi tiêu đề related products thành "Các sản phẩm trong nhóm"
         const relatedTitle = document.querySelector('.related-products h2');
@@ -468,7 +470,7 @@ class ProductGroupDetail {
 
     setupEventListeners() {
         // Sử dụng event delegation cho swiper buttons
-        
+
     }
 
     findParentSwiper(element) {

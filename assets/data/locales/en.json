@@ -72,6 +72,7 @@
     "groups": {
       "corn": {
         "name": "CORN",
+        "description": "<h3><i class='fas fa-info-circle'></i> Overview</h3><p>Corn Silage is a product fermented from fresh whole corn plants (including stems, leaves, and ears) under anaerobic conditions. The fermentation process helps preserve natural nutrients and creates aromatic feed that is appealing to livestock.</p><h3><i class='fas fa-check-circle'></i> Outstanding Features</h3><ul><li><strong>Raw Material:</strong> Fresh corn harvested at wax maturity stage</li><li><strong>Moisture:</strong> 65-70%</li><li><strong>Crude Protein:</strong> 8-9%</li><li><strong>Fiber:</strong> 20-22%</li><li><strong>pH:</strong> 3.8-4.2 (stable, long-term storage)</li></ul><h3><i class='fas fa-cow'></i> Applications</h3><p>Main feed for dairy cattle, beef cattle, goats, and sheep. Helps improve milk yield and effective weight gain.</p><div class='highlight'>Products meet export standards for markets in Japan, South Korea, and the Middle East.</div>",
         "children": [
           "corn_silage",
           "corn_cob_meal",
@@ -80,6 +81,7 @@
       },
       "sawdust": {
         "name": "SAWDUST",
+        "description": "<h3><i class='fas fa-tree'></i> Raw Materials</h3><p>Pine Sawdust Block is compressed from 100% fresh pine sawdust, without mixing, ensuring uniform quality.</p><h3><i class='fas fa-weight-hanging'></i> Characteristics</h3><table><tr><th>Parameter</th><th>Value</th></tr><tr><td>Block Size</td><td>30×30×15cm</td></tr><tr><td>Weight</td><td>10-12kg/block</td></tr><tr><td>Moisture</td><td>≤ 15%</td></tr><tr><td>Compression Density</td><td>≥ 650kg/m³</td></tr><tr><td>Color</td><td>Natural light yellow</td></tr></table><h3><i class='fas fa-seedling'></i> Main Uses</h3><ul><li>Growing medium for orchids, premium flowers</li><li>Livestock bedding material</li><li>Raw material for pellet production</li><li>Moisture absorption in warehouses</li></ul>",
         "children": [
           "pine_sawdust_block",
           "acacia_sawdust_pellet"
@@ -87,6 +89,7 @@
       },
       "others": {
         "name": "OTHERS",
+        "description": "<h3><i class='fas fa-boxes'></i> Flexible According to Needs</h3><p>We provide various other agricultural by-products according to specific customer requirements. With our widespread collection system and advanced processing technology, we can meet diverse needs.</p><h3><i class='fas fa-list'></i> Potential Products</h3><ul><li>Coffee husks, rice husks</li><li>Cassava residue, soybean residue</li><li>Vegetable and fruit by-products</li><li>Compressed straw pellets</li><li>Various types of silage grass</li></ul><h3><i class='fas fa-cogs'></i> Consulting Services</h3><p>Our technical team is ready to advise on:</p><ul><li>Selecting suitable raw materials</li><li>Processing and preservation technology</li><li>Designing feed formulations</li><li>By-product utilization solutions</li></ul><div class='highlight'>Contact us immediately for consultation on the most suitable products for your needs!</div>",
         "children": [
           "dried_bagasse",
           "pineapple_silage",

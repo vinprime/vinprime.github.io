@@ -94,19 +94,24 @@
     background: #005a34;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
     .language-switcher {
-        top: 10px;
+        position: fixed;
+        bottom: 20px;
         right: 10px;
+        top: auto;
+        left: auto;
+        z-index: 1000;
     }
     
-    .language-dropdown:hover .language-menu {
+    .language-dropdown:hover .language-menu,
+    .language-dropdown:focus-within .language-menu {
         position: fixed;
-        top: 60px;
+        bottom: 70px; /* Đặt menu phía trên nút */
         right: 10px;
-        left: 10px;
-        width: auto;
+        left: auto;
+        width: 200px;
+        top: auto;
     }
 }
 

@@ -72,6 +72,7 @@
     "groups": {
       "corn": {
         "name": "NGÔ",
+        "description": "<h3><i class='fas fa-info-circle'></i> Tổng quan</h3><p>Ngô ủ chua (Corn Silage) là sản phẩm được lên men từ toàn bộ cây ngô tươi (bao gồm thân, lá và bắp) trong điều kiện yếm khí. Quá trình lên men giúp bảo quản dinh dưỡng tự nhiên và tạo ra thức ăn có mùi thơm hấp dẫn cho vật nuôi.</p><h3><i class='fas fa-check-circle'></i> Đặc điểm nổi bật</h3><ul><li><strong>Nguyên liệu:</strong> Ngô tươi thu hoạch ở giai đoạn chín sáp</li><li><strong>Độ ẩm:</strong> 65-70%</li><li><strong>Protein thô:</strong> 8-9%</li><li><strong>Chất xơ:</strong> 20-22%</li><li><strong>pH:</strong> 3.8-4.2 (ổn định, bảo quản lâu dài)</li></ul><h3><i class='fas fa-cow'></i> Ứng dụng</h3><p>Thức ăn chính cho bò sữa, bò thịt, dê, cừu. Giúp cải thiện sản lượng sữa và tăng trọng hiệu quả.</p><div class='highlight'>Sản phẩm đạt tiêu chuẩn xuất khẩu sang thị trường Nhật Bản, Hàn Quốc và Trung Đông.</div>",
         "children": [
           "corn_silage",
           "corn_cob_meal",
@@ -80,6 +81,7 @@
       },
       "sawdust": {
         "name": "MÙN CƯA",
+        "description": "<h3><i class='fas fa-tree'></i> Nguyên liệu</h3><p>Mùn cưa thông khối (Pine Sawdust Block) được ép từ 100% mùn cưa thông tươi, không pha trộn, đảm bảo chất lượng đồng nhất.</p><h3><i class='fas fa-weight-hanging'></i> Đặc điểm</h3><table><tr><th>Thông số</th><th>Giá trị</th></tr><tr><td>Kích thước khối</td><td>30×30×15cm</td></tr><tr><td>Trọng lượng</td><td>10-12kg/khối</td></tr><tr><td>Độ ẩm</td><td>≤ 15%</td></tr><tr><td>Độ nén</td><td>≥ 650kg/m³</td></tr><tr><td>Màu sắc</td><td>Vàng nhạt tự nhiên</td></tr></table><h3><i class='fas fa-seedling'></i> Công dụng chính</h3><ul><li>Giá thể trồng lan, hoa cao cấp</li><li>Chất độn chuồng trại gia súc</li><li>Nguyên liệu ép viên</li><li>Hút ẩm trong kho bãi</li></ul>",
         "children": [
           "pine_sawdust_block",
           "acacia_sawdust_pellet"
@@ -87,6 +89,7 @@
       },
       "others": {
         "name": "KHÁC",
+        "description": "<h3><i class='fas fa-boxes'></i> Linh hoạt theo nhu cầu</h3><p>Chúng tôi cung cấp các loại phụ phẩm nông nghiệp khác theo yêu cầu cụ thể của khách hàng. Với hệ thống thu mua rộng khắp và công nghệ xử lý tiên tiến, chúng tôi có thể đáp ứng đa dạng nhu cầu.</p><h3><i class='fas fa-list'></i> Sản phẩm tiềm năng</h3><ul><li>Vỏ cà phê, vỏ trấu</li><li>Bã sắn, bã đậu nành</li><li>Phụ phẩm rau củ quả</li><li>Rơm rạ ép viên</li><li>Các loại cỏ ủ chua</li></ul><h3><i class='fas fa-cogs'></i> Dịch vụ tư vấn</h3><p>Đội ngũ kỹ thuật của chúng tôi sẵn sàng tư vấn về:</p><ul><li>Lựa chọn nguyên liệu phù hợp</li><li>Công nghệ xử lý và bảo quản</li><li>Thiết kế công thức thức ăn</li><li>Giải pháp tận dụng phụ phẩm</li></ul><div class='highlight'>Liên hệ ngay để được tư vấn sản phẩm phù hợp nhất với nhu cầu của bạn!</div>",
         "children": [
           "dried_bagasse",
           "pineapple_silage",

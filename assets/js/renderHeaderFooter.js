@@ -100,7 +100,7 @@ async function renderHeaderFooter() {
               <img src="${site.logo}" alt="${site.siteName}" class="header-logo" onerror="this.src='assets/images/fallback-logo.png'">
             </a>
             <button class="menu-toggle" aria-label="Mở menu" id="menuToggle" data-i18n="[aria-label]nav.menu">
-              <span class="menu-icon">☰</span>
+              <span class="menu-icon"></span>
             </button>
             <nav class="header-nav" aria-label="Menu chính" id="mainNav">
               <ul>
@@ -313,9 +313,6 @@ function setupMobileMenu() {
 
       // Đổi icon
       const menuIcon = menuToggle.querySelector('.menu-icon');
-      if (menuIcon) {
-        menuIcon.textContent = isActive ? '☰' : '✕';
-      }
 
       // Khóa scroll body khi menu mở
       document.body.style.overflow = isActive ? '' : 'hidden';
@@ -329,7 +326,7 @@ function setupMobileMenu() {
         menuToggle.classList.remove('active');
         const menuIcon = menuToggle.querySelector('.menu-icon');
         if (menuIcon) {
-          menuIcon.textContent = '☰';
+          menuIcon.textContent = '';
         }
         document.body.style.overflow = '';
       });
@@ -350,7 +347,7 @@ function setupMobileMenu() {
           menuToggle.classList.remove('active');
           const menuIcon = menuToggle.querySelector('.menu-icon');
           if (menuIcon) {
-            menuIcon.textContent = '☰';
+            menuIcon.textContent = '';
           }
           document.body.style.overflow = '';
         }
@@ -365,7 +362,7 @@ function setupMobileMenu() {
         menuToggle.classList.remove('active');
         const menuIcon = menuToggle.querySelector('.menu-icon');
         if (menuIcon) {
-          menuIcon.textContent = '☰';
+          menuIcon.textContent = '';
         }
         document.body.style.overflow = '';
       }

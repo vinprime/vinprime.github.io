@@ -1,0 +1,327 @@
+/* ===== FOOTER MOBILE (0-767px) - RESPONSIVE ===== */
+@media (max-width: 767px) {
+    footer {
+        background-color: #ffffff;
+        color: var(--text-color);
+        padding: 40px 0 0;
+        margin-top: 60px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--border-color);
+        /* THÊM PADDING TRÁI PHẢI */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* THÊM PADDING CHO CONTAINER NẾU CÓ */
+    .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-col {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-left {
+        order: 1;
+    }
+
+    .footer-logo-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        max-width: 200px;
+    }
+
+    .footer-logo {
+        max-height: 50px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(24%) sepia(89%) saturate(1195%) hue-rotate(135deg) brightness(92%) contrast(101%);
+    }
+
+    .footer-left h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .footer-left p {
+        color: var(--text-color);
+        line-height: 1.6;
+        margin-bottom: 10px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .footer-tax {
+        font-size: 13px !important;
+        color: #666 !important;
+        margin-top: 8px !important;
+        font-style: italic;
+    }
+
+    /* Footer Right Column - Thông tin liên hệ */
+    .footer-right {
+        order: 2;
+    }
+
+    .footer-right h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 8px;
+    }
+
+    .footer-right h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+
+    .footer-right p {
+        color: var(--text-color);
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+    .footer-right strong {
+        color: var(--secondary-color);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .footer-right a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        word-break: break-all;
+    }
+
+    .footer-right a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+    }
+
+    /* ===== SOCIAL ICONS ===== */
+    .footer-social {
+        margin-top: 25px;
+        order: 3;
+    }
+
+    .footer-social h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 20px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+    }
+
+    /* ===== FOOTER BOTTOM ===== */
+    .footer-bottom {
+        padding: 20px 20px; /* THÊM PADDING TRÁI PHẢI */
+        text-align: center;
+        background-color: #f8f9fa;
+    }
+
+    .footer-bottom .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .footer-bottom p {
+        color: var(--text-color);
+        font-size: 13px;
+        margin: 0;
+        opacity: 0.7;
+        line-height: 1.5;
+        order: 2;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        order: 1;
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom-links a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        opacity: 0.7;
+        white-space: nowrap;
+    }
+}
+
+/* ===== EXTRA SMALL DEVICES ===== */
+@media (max-width: 480px) {
+    footer {
+        padding: 35px 0 0;
+        margin-top: 50px;
+    }
+
+    .footer-inner {
+        gap: 35px;
+        padding-bottom: 25px;
+        /* GIẢM PADDING MỘT CHÚT CHO MÀN NHỎ */
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer-bottom {
+        /* GIẢM PADDING CHO MÀN NHỎ */
+        padding: 18px 16px;
+    }
+
+    .footer-logo-link {
+        margin-bottom: 15px;
+        max-width: 180px;
+    }
+
+    .footer-logo {
+        max-height: 45px;
+    }
+
+    .footer-left h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-left p {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .footer-right h4 {
+        font-size: 17px;
+        margin-bottom: 18px;
+        padding-bottom: 6px;
+    }
+
+    .footer-right p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .footer-right strong {
+        font-size: 13px;
+    }
+
+    .footer-social h4 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* ===== VERY SMALL DEVICES ===== */
+@media (max-width: 360px) {
+    footer {
+        padding: 30px 0 0;
+        margin-top: 40px;
+    }
+
+    .footer-inner {
+        gap: 30px;
+        padding-bottom: 20px;
+        /* PADDING NHỎ HƠN CHO MÀN 360px */
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .footer-bottom {
+        /* PADDING NHỎ HƠN CHO MÀN 360px */
+        padding: 16px 14px;
+    }
+
+    .footer-logo {
+        max-height: 40px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .footer-bottom-links {
+        gap: 10px;
+    }
+
+    .footer-bottom-links a {
+        font-size: 11px;
+    }
+}
+
+/* ===== THÊM ĐỂ ĐẢM BẢO CONTAINER ĐÚNG ===== */
+@media (max-width: 767px) {
+    /* Nếu bạn dùng container chung */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* Hoặc nếu footer có container riêng */
+    footer .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

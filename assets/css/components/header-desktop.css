@@ -210,10 +210,6 @@
     .overlay {
         display: none !important;
     }
-}
-
-/* ===== HEADER SCROLL EFFECT ===== */
-@media (min-width: 768px) {
     @keyframes headerSlideDown {
         from {
             transform: translateY(-100%);
@@ -229,4 +225,4 @@
     header {
         animation: headerSlideDown 0.5s ease;
     }
-}
+} 
