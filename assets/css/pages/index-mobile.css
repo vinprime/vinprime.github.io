@@ -131,42 +131,141 @@
     }
 
     /* Flip card chỉ hoạt động trên desktop, mobile hiển thị luôn nội dung */
-    @media (hover: none) and (pointer: coarse) {
+    /* ===== MOBILE TOUCH DEVICE FLIP FIX ===== */
+    @media (hover: none) and (pointer: coarse) and (max-width: 767px) {
         .activity-card {
-            perspective: none !important;
-            cursor: default !important;
-        }
-
-        .card-inner {
+            cursor: pointer !important;
+            min-height: auto !important;
+            transition: min-height 0.3s ease !important;
             transform: none !important;
+            position: relative !important;
+            overflow: visible !important;
         }
 
+        .activity-card .card-inner {
+            transform: none !important;
+            transition: none !important;
+            display: block !important;
+            height: 100% !important;
+            position: relative !important;
+        }
+
+        /* Card back - THÊM MÀU NỀN VÀ MÀU CHỮ */
         .card-back {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            transform: none !important;
+            opacity: 0 !important;
+            overflow: hidden !important;
+            transition: opacity 0.3s ease !important;
+            margin-top: 0 !important;
+            padding: 25px !important;
+            box-sizing: border-box !important;
+            background: #2c3e50 !important;
+            /* THÊM: màu nền tối */
+            border-radius: 10px !important;
+            z-index: 1 !important;
+            visibility: hidden !important;
+
+            /* THÊM: màu chữ cho toàn bộ card-back */
+            color: white !important;
+        }
+
+        /* THÊM: màu chữ cụ thể cho các phần tử trong card-back */
+        .card-back h4 {
+            color: white !important;
+            margin-bottom: 20px !important;
+            font-size: 1.4rem !important;
+        }
+
+        .card-back .details-list {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .card-back .details-list li {
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin-bottom: 10px !important;
+            padding-left: 15px !important;
+            position: relative !important;
+        }
+
+        .card-back .details-list li:before {
+            content: "•" !important;
+            color: #28a745 !important;
+            position: absolute !important;
+            left: 0 !important;
+        }
+
+        /* Khi flipped: hiện card back */
+        .activity-card.flipped .card-back {
+            opacity: 1 !important;
+            visibility: visible !important;
+            z-index: 3 !important;
+        }
+
+        /* Card front khi flipped - ẩn hoàn toàn */
+        .activity-card.flipped .card-front {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            z-index: 2 !important;
+        }
+
+        /* Đảm bảo card-front có màu nền */
+        .card-front {
+            position: relative !important;
+            z-index: 2 !important;
+            background: white !important;
+            border-radius: 10px !important;
+            height: 100% !important;
+            transition: opacity 0.3s ease !important;
+
+            /* THÊM: màu chữ cho card-front */
+            color: #333 !important;
+            /* Màu chữ tối */
+        }
+
+        /* Đảm bảo các phần tử trong card-front có màu đúng */
+        .card-front .card-title {
+            color: #2c3e50 !important;
+        }
+
+        .card-front .card-description {
+            color: #555 !important;
+        }
+
+        .card-front .card-cta {
+            color: #28a745 !important;
+        }
+
+        /* Hiệu ứng cho card khi flipped */
+        .activity-card.flipped {
+            min-height: 550px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+            z-index: 10 !important;
             position: relative !important;
             transform: none !important;
-            display: block !important;
-            margin-top: 20px !important;
-            border-radius: 10px !important;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease !important;
-        }
-
-        .activity-card.expanded .card-back {
-            opacity: 1;
-            max-height: 500px;
-            margin-top: 20px;
         }
 
         .close-details {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-        }
-
-        .card-cta {
-            pointer-events: auto !important;
+            position: absolute !important;
+            top: 15px !important;
+            right: 15px !important;
+            z-index: 11 !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            /* Nền sáng cho icon */
+            border-radius: 50% !important;
+            width: 35px !important;
+            height: 35px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border: none !important;
+            color: #2c3e50 !important;
+            /* Màu icon tối */
+            font-size: 1.2rem !important;
         }
     }
 

@@ -32,9 +32,9 @@ async function loadSiteData() {
       },
       menu: [
         { name: 'Trang chủ', url: 'index.html' },
-        { name: 'Sản phẩm', url: 'products.html' },
-        { name: 'Về chúng tôi', url: 'about.html' },
-        { name: 'Liên hệ', url: 'contact.html' },
+        { name: 'Sản phẩm', url: 'all-products-page.html' },
+        { name: 'Về chúng tôi', url: 'about-page.html' },
+        { name: 'Liên hệ', url: 'contact-page.html' },
         { name: 'Hotline', url: 'tel:0123456789' }
       ],
       about: {

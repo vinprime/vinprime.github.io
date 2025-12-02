@@ -5,6 +5,8 @@ import './header-enhancements.js';
 import './dataLoader.js';
 import './renderHeaderFooter.js';
 import './products.js'; 
+import './about-page.js'; 
+import './contact-page.js'; 
 import './quotation.js'; 
 import './intro.js'; 
 import './activities.js'; 

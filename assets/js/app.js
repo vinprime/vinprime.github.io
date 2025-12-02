@@ -86,7 +86,7 @@ async function loadPageContent() {
       }
       break;
 
-    case 'contact.html':
+    case 'contact-page.html':
       if (typeof loadContactPage === 'function') {
         await loadContactPage();
       }

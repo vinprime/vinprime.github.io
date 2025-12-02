@@ -1,0 +1,16 @@
+{
+    "i18nKeyTitle": "contact.page.title",
+    "i18nKeySubtitle": "contact.page.subtitle",
+    "form": {
+        "name": "contact.page.form.name",
+        "email": "contact.page.form.email",
+        "phone": "contact.page.form.phone",
+        "message": "contact.page.form.message",
+        "button": "contact.page.form.button"
+    },
+    "contactInfo": {
+        "address": "contact.page.info.address",
+        "phone": "contact.page.info.phone",
+        "hours": "contact.page.info.hours"
+    }
+}

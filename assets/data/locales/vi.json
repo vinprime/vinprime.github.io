@@ -232,8 +232,39 @@
       }
     ]
   },
+  "contact": {
+    "page": {
+      "title": "Liên Hệ",
+      "subtitle": "Liên hệ với đội ngũ của chúng tôi cho mọi thắc mắc"
+    },
+    "form": {
+      "name": "Họ và Tên",
+      "email": "Địa chỉ Email",
+      "phone": "Số Điện Thoại",
+      "message": "Nội dung Tin nhắn",
+      "button": "Gửi Tin nhắn",
+      "success": "Cảm ơn bạn! Trình email đang được mở...",
+      "sending": "Đang gửi...",
+      "select_subject": "Chọn Chủ đề",
+      "general_inquiry": "Thắc mắc chung",
+      "product_info": "Thông tin Sản phẩm",
+      "quotation": "Yêu cầu Báo giá",
+      "partnership": "Hợp tác",
+      "tech_support": "Hỗ trợ Kỹ thuật",
+      "other": "Khác"
+    }
+  },
   "misc": {
     "view_details": "Xem Chi Tiết",
-    "contact": "Liên hệ đặt hàng"
+    "contact": "Liên Hệ Đặt Hàng",
+    "phone_number": "Số Điện Thoại",
+    "address": "Địa Chỉ",
+    "company_name": "Tên Công Ty",
+    "company_info": "Thông Tin Công Ty",
+    "email_address": "Địa chỉ Email",
+    "tax_code": "Mã Số Thuế",
+    "working_hours": "Giờ Làm Việc",
+    "mission": "Sứ Mệnh",
+    "vision": "Tầm Nhìn"
   }
 }

@@ -106,8 +106,8 @@ class ProductGroupDetail {
         const breadcrumb = document.getElementById('product-breadcrumb');
         if (!breadcrumb) return;
         breadcrumb.innerHTML = `
-            <a href="index.html" data-i18n="site.name">${window.i18n.t('site.name')}</a> &gt;
-            <a href="products.html" data-i18n="products.title">${window.i18n.t('products.title')}</a> &gt;
+            <a href="index.html" data-i18n="site.name">${window.i18n.t('site.name').toUpperCase()}</a> &gt;
+            <a href="all-products-page.html" data-i18n="products.title">${window.i18n.t('products.title')}</a> &gt;
             <span id="current-group"data-i18n="products.groups.${this.groupId}.name">${window.i18n.t(`products.groups.${this.groupId}.name`)}</span>
         `;
     }
@@ -458,7 +458,7 @@ class ProductGroupDetail {
                 Nhóm sản phẩm bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.
             </p>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-                <a href="products.html" style="
+                <a href="all-products-page.html" style="
                     display: inline-flex;
                     align-items: center;
                     gap: 8px;

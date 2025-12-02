@@ -32,8 +32,7 @@ function isCurrentPage(itemUrl, currentPage) {
   if (currentPage === 'index.html' && (itemUrl === '/' || itemUrl === '' || itemUrl === './')) {
     return true;
   }
-
-  // Handle cases like "products" vs "products.html"
+ 
   if (currentPage.replace('.html', '') === itemPage.replace('.html', '')) {
     return true;
   }
@@ -243,14 +242,14 @@ async function renderHeaderFooter() {
               <li${currentPage === 'index.html' ? ' class="active"' : ''}>
                 <a href="index.html" data-i18n="nav.home">Trang chủ</a>
               </li>
-              <li${currentPage === 'products.html' ? ' class="active"' : ''}>
-                <a href="products.html" data-i18n="nav.products">Sản phẩm</a>
+              <li${currentPage === 'all-products-page.html' ? ' class="active"' : ''}>
+                <a href="all-products-page.html" data-i18n="nav.products">Sản phẩm</a>
               </li>
-              <li${currentPage === 'about.html' ? ' class="active"' : ''}>
-                <a href="about.html" data-i18n="nav.about">Giới thiệu</a>
+              <li${currentPage === 'about-page.html' ? ' class="active"' : ''}>
+                <a href="about-page.html" data-i18n="nav.about">Giới thiệu</a>
               </li>
-              <li${currentPage === 'contact.html' ? ' class="active"' : ''}>
-                <a href="contact.html" data-i18n="nav.contact">Liên hệ</a>
+              <li${currentPage === 'contact-page.html' ? ' class="active"' : ''}>
+                <a href="contact-page.html" data-i18n="nav.contact">Liên hệ</a>
               </li> 
             </ul>
           </nav>

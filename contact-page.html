@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-i18n="site.name"></title>
+    <meta name="description"
+        content="VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và ứng dụng công nghiệp">
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/pages/contact-page-desktop.css" as="style">
+    <link rel="preload" href="assets/css/pages/contact-page-mobile.css" as="style">
+    <link rel="preload" href="assets/js/utils.js" as="script">
+
+    <!-- Trong head của index.html -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages/contact-page-desktop.css">
+    <link rel="stylesheet" href="assets/css/pages/contact-page-mobile.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading progress bar (optional) -->
+    <div class="loading-progress" id="loadingProgress"></div>
+
+    <header></header>
+
+    <main class="container">
+        <!-- Skeleton loading cho nội dung -->
+        <div class="content-loading skeleton-loading active">
+            <div class="hero-skeleton skeleton-item skeleton-pulse"></div>
+
+            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse short"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse medium"></div>
+            <div class="text-skeleton skeleton-item skeleton-pulse long"></div>
+
+            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
+            <div class="products-skeleton-grid">
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+            </div>
+        </div>
+
+        <!-- Nội dung thực tế -->
+        <div class="real-content" style="display: none;">
+            <section class="contact-page-section" data-aos="fade-up">
+                <!-- contact-page.js sẽ render -->
+            </section>
+        </div>
+    </main>
+
+    <footer></footer>
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/aos.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>

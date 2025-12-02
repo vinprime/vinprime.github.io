@@ -318,14 +318,14 @@ class I18n {
                 }
                 break;
 
-            case 'products.html':
+            case 'all-products-page.html':
                 if (typeof updateProductsContent === 'function') {
                     console.log('📦 Updating products page content...');
                     await updateProductsContent();
                 }
                 break;
 
-            case 'about.html':
+            case 'about-page.html':
                 if (typeof updateAboutContent === 'function') {
                     console.log('🏢 Updating about page content...');
                     await updateAboutContent();

@@ -6,7 +6,7 @@
   },
   {
     "name": "ABOUT US",
-    "url": "index.html#get-about",
+    "url": "about-page.html",
     "i18nKey": "nav.about"
   },
   {
@@ -16,12 +16,12 @@
   },
   {
     "name": "PRODUCT",
-    "url": "products.html",
+    "url": "all-products-page.html",
     "i18nKey": "nav.products"
   },
   {
     "name": "CONTACT US",
-    "url": "index.html#get-contact",
+    "url": "contact-page.html",
     "i18nKey": "nav.contact"
   } 
 ]

@@ -1,5 +1,16 @@
 {
-  "about": { 
-    "image_intro_src": "/assets/images/root/about-vinprime.jpg"
+  "about": {
+    "image_intro_src": "/assets/images/root/about-vinprime.jpg",
+    "image_card_src_random": [
+      "assets/images/products/acacia_sawdust_pellet_1.jpg",
+      "assets/images/products/corn_cob_meal_1.jpg",
+      "assets/images/products/corn_cob_pellet_1.jpg",
+      "assets/images/products/corn_silage_1.jpg",
+      "assets/images/products/corn_silage_2.jpg",
+      "assets/images/products/corn-group.jpg",
+      "assets/images/products/others-group.jpg",
+      "assets/images/products/pine_sawdust_block_1.jpg",
+      "assets/images/products/sawdust-group.jpg"
+    ]
   }
 }

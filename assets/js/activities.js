@@ -1,10 +1,10 @@
 // activities.js
 // Apply translations after render
 function applyTranslations() {
-  if (window.i18n && typeof window.i18n.applyLanguage === 'function') {
-    window.i18n.applyLanguage();
-  }
-} 
+    if (window.i18n && typeof window.i18n.applyLanguage === 'function') {
+        window.i18n.applyLanguage();
+    }
+}
 class ActivitiesSection {
     constructor() {
         this.activitiesData = null;
@@ -41,7 +41,7 @@ class ActivitiesSection {
         section.innerHTML = this.createHTML();
         this.initHoverEffects();
         // Apply translations
-      applyTranslations();
+        applyTranslations();
     }
 
     createHTML() {
@@ -101,16 +101,40 @@ class ActivitiesSection {
         const cards = document.querySelectorAll('.activity-card');
 
         cards.forEach(card => {
-            card.addEventListener('click', () => {
+            // Click để toggle flip
+            card.addEventListener('click', (e) => {
+                // Không flip nếu click vào nút close
+                if (e.target.closest('.close-details')) {
+                    card.classList.remove('flipped');
+                    e.stopPropagation();
+                    return;
+                }
+
+                // Đóng tất cả card khác trước
+                cards.forEach(otherCard => {
+                    if (otherCard !== card && otherCard.classList.contains('flipped')) {
+                        otherCard.classList.remove('flipped');
+                    }
+                });
+
+                // Toggle card hiện tại
                 card.classList.toggle('flipped');
             });
         });
-    }
 
+        // Đóng card khi click ra ngoài
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.activity-card')) {
+                cards.forEach(card => {
+                    card.classList.remove('flipped');
+                });
+            }
+        });
+    }
     renderFallback() {
         const section = document.getElementById('home-activities');
 
-        if (!section) return; 
+        if (!section) return;
         section.innerHTML = `
             <div class="activities-container">
                 <div class="activities-header"> 
@@ -138,7 +162,7 @@ class ActivitiesSection {
                     </div>
                 </div>
             </div>
-        `; 
+        `;
     }
 }
 
