@@ -12,5 +12,6 @@
         "address": "contact.page.info.address",
         "phone": "contact.page.info.phone",
         "hours": "contact.page.info.hours"
-    }
+    },
+    "image_intro_src": "/assets/images/root/hero.jpg"
 }

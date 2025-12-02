@@ -235,23 +235,23 @@
   "contact": {
     "page": {
       "title": "Contact Us",
-      "subtitle": "Get in touch with our team for any inquiries"
-    },
-    "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "message": "Your Message",
-      "button": "Send Message",
-      "success": "Thank you! Email client is opening...",
-      "sending": "Sending...",
-      "select_subject": "Select Subject",
-      "general_inquiry": "General Inquiry",
-      "product_info": "Product Information",
-      "quotation": "Quotation Request",
-      "partnership": "Partnership",
-      "tech_support": "Technical Support",
-      "other": "Other"
+      "subtitle": "Get in touch with our team for any inquiries",
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "message": "Your Message",
+        "button": "Send Message",
+        "success": "Thank you! Email client is opening...",
+        "sending": "Sending...",
+        "select_subject": "Select Subject",
+        "general_inquiry": "General Inquiry",
+        "product_info": "Product Information",
+        "quotation": "Quotation Request",
+        "partnership": "Partnership",
+        "tech_support": "Technical Support",
+        "other": "Other"
+      }
     }
   },
   "misc": {

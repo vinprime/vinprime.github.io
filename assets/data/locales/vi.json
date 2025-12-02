@@ -235,23 +235,23 @@
   "contact": {
     "page": {
       "title": "Liên Hệ",
-      "subtitle": "Liên hệ với đội ngũ của chúng tôi cho mọi thắc mắc"
-    },
-    "form": {
-      "name": "Họ và Tên",
-      "email": "Địa chỉ Email",
-      "phone": "Số Điện Thoại",
-      "message": "Nội dung Tin nhắn",
-      "button": "Gửi Tin nhắn",
-      "success": "Cảm ơn bạn! Trình email đang được mở...",
-      "sending": "Đang gửi...",
-      "select_subject": "Chọn Chủ đề",
-      "general_inquiry": "Thắc mắc chung",
-      "product_info": "Thông tin Sản phẩm",
-      "quotation": "Yêu cầu Báo giá",
-      "partnership": "Hợp tác",
-      "tech_support": "Hỗ trợ Kỹ thuật",
-      "other": "Khác"
+      "subtitle": "Liên hệ với đội ngũ của chúng tôi cho mọi thắc mắc",
+      "form": {
+        "name": "Họ và Tên",
+        "email": "Địa chỉ Email",
+        "phone": "Số Điện Thoại",
+        "message": "Nội dung Tin nhắn",
+        "button": "Gửi Tin nhắn",
+        "success": "Cảm ơn bạn! Trình email đang được mở...",
+        "sending": "Đang gửi...",
+        "select_subject": "Chọn Chủ đề",
+        "general_inquiry": "Thắc mắc chung",
+        "product_info": "Thông tin Sản phẩm",
+        "quotation": "Yêu cầu Báo giá",
+        "partnership": "Hợp tác",
+        "tech_support": "Hỗ trợ Kỹ thuật",
+        "other": "Khác"
+      }
     }
   },
   "misc": {

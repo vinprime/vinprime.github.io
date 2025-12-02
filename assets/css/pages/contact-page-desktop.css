@@ -7,56 +7,73 @@
 .contact-page-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 0 20px;
+}
+
+.contact-page-hero {
     position: relative;
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(233, 236, 239, 0.95) 100%);
-    border-radius: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+    max-height: 700px;
+    margin: 0 -20px 60px;
+    overflow: hidden;
+    border-radius: 0;
 }
 
-/* Header Section */
-.contact-page-header {
-    text-align: center;
-    margin-bottom: 70px;
-    padding: 0 40px;
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.contact-page-header .section-title {
-    font-size: 3.8rem;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    letter-spacing: -0.5px;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    /* Điều chỉnh vị trí ảnh */
 }
 
-.contact-page-header .section-title::before {
+.hero-image::after {
     content: '';
     position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 6px;
-    background: linear-gradient(to right, #3498db, #2ecc71);
-    border-radius: 3px;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    z-index: 1;
 }
 
-.contact-page-header .section-subtitle {
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 90%;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
     font-size: 1.3rem;
-    color: #5d6d7e;
     max-width: 700px;
-    margin: 30px auto 0;
-    line-height: 1.7;
-    font-weight: 400;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 /* Main Content Grid */
@@ -383,6 +400,7 @@
         opacity: 0;
         transform: translateY(-20px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -450,8 +468,13 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ===== Background Effects ===== */
@@ -483,7 +506,7 @@
         max-width: 95%;
         padding: 80px 20px;
     }
-    
+
     .contact-page-content {
         gap: 60px;
     }
@@ -493,70 +516,22 @@
     .contact-page-header .section-title {
         font-size: 3.2rem;
     }
-    
+
     .contact-page-content {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .contact-page-info-section::before {
         display: none;
     }
-    
+
     .contact-page-info-section {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-    
+
     .contact-page-info-card {
         padding: 30px 25px;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .contact-page-container {
-        box-shadow: none;
-        background: white !important;
-    }
-    
-    .contact-page-submit-btn {
-        display: none !important;
-    }
-    
-    .contact-page-info-card,
-    .contact-page-form-section {
-        box-shadow: none;
-        border: 1px solid #ddd !important;
-        page-break-inside: avoid;
-    }
-    
-    .contact-page-form input,
-    .contact-page-form select,
-    .contact-page-form textarea {
-        border: 1px solid #ddd !important;
-        background: white !important;
-    }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    .contact-page-container {
-        border: 3px solid #000;
-    }
-    
-    .contact-page-info-card,
-    .contact-page-form-section {
-        border: 2px solid #000;
-    }
-    
-    .contact-page-form input,
-    .contact-page-form select,
-    .contact-page-form textarea {
-        border: 2px solid #000;
-    }
-    
-    .contact-page-submit-btn {
-        border: 2px solid #000;
     }
 }

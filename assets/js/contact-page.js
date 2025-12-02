@@ -8,7 +8,7 @@ class ContactPageSection {
     constructor() {
         this.contactData = null;
         this.jsonUrl = 'assets/data/contact-page.json'; // Tên file JSON riêng
-        this.bgImageLoaded = false;  
+        this.bgImageLoaded = false;
         this.siteInfo = {};
     }
 
@@ -36,7 +36,7 @@ class ContactPageSection {
             }
 
             const { site, menu } = data;
-            this.siteInfo = site ? site : {}; 
+            this.siteInfo = site ? site : {};
             this.render();
             this.initBackgroundImage();
         } catch (error) {
@@ -62,14 +62,22 @@ class ContactPageSection {
     }
 
     createHTML() {
-        const { i18nKeyTitle, i18nKeySubtitle, form, contactInfo } = this.contactData; 
+        const { i18nKeyTitle, i18nKeySubtitle, image_intro_src, form, contactInfo } = this.contactData;
         return `
-            <div class="contact-page-container" id="contact-section">
-                <div class="contact-page-header" data-aos="fade-up">
-                    <h2 data-i18n="${i18nKeyTitle}" class="section-title">CONTACT US</h2>
-                    <p data-i18n="${i18nKeySubtitle}" class="section-subtitle">Get in touch with our team for any inquiries</p>
+            <div class="contact-page-container" id="contact-section"> 
+                <!-- Hero Section -->
+                <section class="contact-page-hero" data-aos="fade-up">
+                <div class="hero-image">
+                    <img src="${image_intro_src}" 
+                        alt="VinPrime - About Us"
+                        loading="lazy"
+                        onerror="this.src='/assets/images/about/default-hero.jpg'">
                 </div>
-                
+                <div class="hero-content">
+                    <h1 data-i18n="contact.page.title" class="hero-title">Về VinPrime</h1>
+                    <p data-i18n="contact.page.subtitle" class="hero-subtitle">Cung cấp nguyên liệu sạch, chất lượng cao cho ngành chăn nuôi và công nghiệp</p>
+                </div>
+                </section>
                 <div class="contact-page-content" data-aos="fade-up" data-aos-delay="100">
                     <div class="contact-page-info-section">
                         <div class="contact-page-info-card" data-aos="fade-right">
@@ -101,7 +109,7 @@ class ContactPageSection {
                                 <i class="fas fa-clock"></i>
                             </div>
                             <h3 data-i18n="misc.working_hours">Working Hours</h3>
-                            <p>${this.siteInfo.workingHours}</p>
+                            <p>${this.siteInfo.phone}</p>
                         </div>
                     </div>
                     
@@ -111,7 +119,7 @@ class ContactPageSection {
                                 <input type="text" 
                                        name="name"
                                        required
-                                       data-i18n="contact.page.form.name"
+                                       data-i18n="${form.name}"
                                        placeholder="FULL NAME">
                             </div>
                             
@@ -119,26 +127,27 @@ class ContactPageSection {
                                 <input type="email" 
                                        name="email"
                                        required
-                                       data-i18n="contact.page.form.email"
+                                       data-i18n="${form.email}"
                                        placeholder="EMAIL ADDRESS">
                             </div>
                             
                             <div class="form-group">
                                 <input type="tel" 
                                        name="phone"
-                                       required 
-                                       placeholder="${window.i18n.t('contact.page.form.phone') || 'PHONE NUMBER'}">
+                                       required
+                                       data-i18n="${form.phone}"
+                                       placeholder="PHONE NUMBER">
                             </div>
                             
                             <div class="form-group">
                                 <select name="subject" required>
-                                    <option value="">${window.i18n.t('contact.page.form.select_subject') || 'Select Subject'}</option>
-                                    <option value="GENERAL_INQUIRY">${window.i18n.t('contact.page.form.general_inquiry') || 'General Inquiry'}</option>
-                                    <option value="PRODUCT_INFO">${window.i18n.t('contact.page.form.product_info') || 'Product Information'}</option>
-                                    <option value="QUOTATION">${window.i18n.t('contact.page.form.quotation') || 'Quotation Request'}</option>
-                                    <option value="PARTNERSHIP">${window.i18n.t('contact.page.form.partnership') || 'Partnership'}</option>
-                                    <option value="TECH_SUPPORT">${window.i18n.t('contact.page.form.tech_support') || 'Technical Support'}</option>
-                                    <option value="OTHER">${window.i18n.t('contact.page.form.other') || 'Other'}</option>
+                                    <option value="" data-i18n="contact.page.form.select_subject">Select Subject</option>
+                                    <option value="GENERAL_INQUIRY" data-i18n="contact.page.form.general_inquiry">General Inquiry</option>
+                                    <option value="PRODUCT_INFO" data-i18n="contact.page.form.product_info">Product Information</option>
+                                    <option value="QUOTATION" data-i18n="contact.page.form.quotation">Quotation Request</option>
+                                    <option value="PARTNERSHIP" data-i18n="contact.page.form.partnership">Partnership</option>
+                                    <option value="TECH_SUPPORT" data-i18n="contact.page.form.tech_support">Technical Support</option>
+                                    <option value="OTHER" data-i18n="contact.page.form.other">Other</option>
                                 </select>
                             </div>
                             
