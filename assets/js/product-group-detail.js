@@ -143,7 +143,7 @@ class ProductGroupDetail {
         // Products in group ${this.groupData.name}
         if (relatedTitle) {
             relatedTitle.innerHTML = `<i class="fas fa-boxes"></i> <span data-i18n="[html]products.groupProducts" 
-        data-i18n-options='{"groupName": "${this.groupData.name}"}'>${window.i18n.t(`products.groupProducts`)} ${this.groupData.name}</span>`;
+        data-i18n-params='{"groupName": "${this.groupData.name}"}'>${window.i18n.t(`products.groupProducts`)} ${this.groupData.name}</span>`;
         }
     }
     renderGallery() {

@@ -27,7 +27,7 @@
     "sitemap": "Sơ đồ trang",
     "rights": "Bảo lưu mọi quyền",
     "connect": "Kết nối với chúng tôi",
-    "tax": "MST"
+    "tax": "MST {taxCode}"
   },
   "404": {
     "title": "Trang không tìm thấy",

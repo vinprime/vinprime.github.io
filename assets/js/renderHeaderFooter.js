@@ -32,7 +32,7 @@ function isCurrentPage(itemUrl, currentPage) {
   if (currentPage === 'index.html' && (itemUrl === '/' || itemUrl === '' || itemUrl === './')) {
     return true;
   }
- 
+
   if (currentPage.replace('.html', '') === itemPage.replace('.html', '')) {
     return true;
   }
@@ -103,10 +103,10 @@ async function renderHeaderFooter() {
             </button>
             <nav class="header-nav" aria-label="Menu chính" id="mainNav">
               <ul>
-                ${menu.map(item => { 
+                ${menu.map(item => {
         const isActive = isCurrentPage(item.url, currentPage);
 
-        let className = ''; 
+        let className = '';
         if (isActive) className += ' active';
         return `
                     <li${className.trim() ? ` class="${className.trim()}"` : ''}>
@@ -147,8 +147,8 @@ async function renderHeaderFooter() {
         <div class="container footer-inner">
           <div class="footer-col footer-left"> 
             <h3>${site.siteName}</h3>
-            <p>${site.address || 'Địa chỉ công ty'}</p>
-            <p class="footer-tax" data-i18n="footer.tax">MST: ${site.taxCode || 'Đang cập nhật'}</p>
+            <p>${site.address || 'Địa chỉ công ty'}</p> 
+            <p class="footer-tax" data-i18n="footer.tax" data-i18n-params='{"taxCode": ${site.taxCode}}'>MST: ${site.taxCode || 'Đang cập nhật'}</p>
             
             <div class="footer-social">
               <h4 data-i18n="footer.connect">Kết nối với chúng tôi</h4>

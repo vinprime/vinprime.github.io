@@ -96,7 +96,20 @@ class AboutPage {
             <p data-i18n="home.heroSub" class="hero-subtitle">Cung cấp nguyên liệu sạch, chất lượng cao cho ngành chăn nuôi và công nghiệp</p>
           </div>
         </section>
-
+        <!-- Company About -->
+        <section class="company-about-section" data-aos="fade-up">
+          <div class="about-page-content">
+            <div class="about-page-header">
+              <div class="title-decoration"> 
+                <h2 class="section-title" data-i18n="about.about.title">VIN PRIME - SỨ MỆNH VÀ TẦM NHÌN</h2>
+              </div>
+            </div>
+            
+            <div class="about-page-description">
+              <p class="lead-text" data-i18n="about.about.description">VIN PRIME ra đời với sứ mệnh mang tinh hoa nguyên liệu Việt vươn tầm quốc tế...</p>
+            </div>
+          </div>
+        </section>
         <!-- Company Info -->
         <section class="company-info-section" data-aos="fade-up">
           <h2  data-i18n="misc.company_info" class="section-title">Thông Tin Công Ty</h2>

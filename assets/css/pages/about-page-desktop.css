@@ -12,7 +12,61 @@
      overflow: hidden;
      border-radius: 0;
  }
+/* Company About Section */
+.company-about-section {
+  margin: 40px 0;
+  padding: 30px 0;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
 
+.about-page-content {
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.about-page-header {
+  margin-bottom: 30px;
+}
+
+.about-page-header .title-decoration {
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.about-page-header .title-decoration::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--primary-color, #2c3e50);
+}
+
+ 
+
+.about-page-description {
+  background: #f8f9fa;
+  padding: 25px 30px;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color, #2c3e50);
+}
+
+.about-page-description .lead-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #495057;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Tách phần dưới với phần Company Info */
+.company-about-section + .company-info-section {
+  margin-top: 40px;
+}
  .hero-image {
      position: absolute;
      top: 0;

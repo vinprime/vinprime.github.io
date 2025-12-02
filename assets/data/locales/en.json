@@ -27,7 +27,7 @@
     "sitemap": "Sitemap",
     "rights": "All rights reserved",
     "connect": "Connect with us",
-    "tax": "Tax Code"
+    "tax": "Tax Code {taxCode}"
   },
   "404": {
     "title": "Page Not Found",

@@ -83,7 +83,7 @@ class ProductsSection {
                     
                     ${productCount > 3 ? `
                         <li class="more-item">
-                            <span data-i18n="[html]products.more" data-i18n-options='{"count": ${productCount - 3}}'>
+                            <span data-i18n="[html]products.more" data-i18n-params='{"count": ${productCount - 3}}'>
                                 +${productCount - 3} sản phẩm khác
                             </span>
                         </li>
