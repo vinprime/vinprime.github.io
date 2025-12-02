@@ -60,6 +60,7 @@
     "downloadCatalog": "Download Catalog",
     "process": "Production Process",
     "packaging": "Packaging Specifications",
+    "technicalspecs": "Technical Specifications",
     "related": "Related Products",
     "viewAll": "View All",
     "highQuality": "High Quality",
@@ -265,6 +266,8 @@
     "tax_code": "Tax Code",
     "working_hours": "Working Hours",
     "mission": "Mission",
-    "vision": "Vision"
+    "vision": "Vision",
+    "groupNavigation": "QUICK GROUP NAVIGATION",
+    "goToTop": "Go to top"
   }
 }

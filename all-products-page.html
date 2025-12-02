@@ -6,78 +6,102 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title data-i18n="site.name"></title>
     <meta name="description"
-        content="VinPrime cung cấp nguyên liệu sạch cho chăn nuôi, sản xuất viên nén, trồng nấm và ứng dụng công nghiệp">
+        content="Tất cả sản phẩm nguyên liệu chăn nuôi và công nghiệp VinPrime - Hiển thị đầy đủ thông tin chi tiết">
+
     <!-- Preload -->
     <link rel="preload" href="assets/css/main.css" as="style">
-    <link rel="preload" href="assets/css/pages/all-page-products-desktop.css" as="style">
-    <link rel="preload" href="assets/css/pages/all-page-products-mobile.css" as="style">
-    <link rel="preload" href="assets/js/utils.js" as="script">
+    <link rel="preload" href="assets/css/pages/all-products-page-desktop.css" as="style">
+    <link rel="preload" href="assets/css/pages/all-products-page-mobile.css" as="style">
 
-    <!-- Trong head của index.html -->
+    <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/pages/all-page-products-desktop.css">
-    <link rel="stylesheet" href="assets/css/pages/all-page-products-mobile.css">
-    <link href="assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pages/all-products-page-desktop.css">
+    <link rel="stylesheet" href="assets/css/pages/all-products-page-mobile.css">
+    <link rel="stylesheet" href="assets/css/components/product-full-view.css">
 </head>
 
 <body>
-    <!-- Loading progress bar (optional) -->
+    <!-- Loading progress bar -->
     <div class="loading-progress" id="loadingProgress"></div>
 
     <header></header>
 
     <main class="container">
-        <!-- Skeleton loading cho nội dung -->
-        <div class="content-loading skeleton-loading active">
-            <div class="hero-skeleton skeleton-item skeleton-pulse"></div>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" id="products-breadcrumb" aria-label="breadcrumb">
+            <!-- Dynamic breadcrumb will be loaded here -->
+        </nav>
 
-            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
-            <div class="text-skeleton skeleton-item skeleton-pulse short"></div>
-            <div class="text-skeleton skeleton-item skeleton-pulse medium"></div>
-            <div class="text-skeleton skeleton-item skeleton-pulse long"></div>
-
-            <div class="content-skeleton skeleton-item skeleton-pulse"></div>
-            <div class="products-skeleton-grid">
-                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
-                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
-                <div class="product-skeleton-card skeleton-item skeleton-pulse"></div>
+        <!-- Skeleton loading -->
+        <div class="all-products-loading skeleton-loading active">
+            <div class="page-header-skeleton">
+                <div class="title-skeleton skeleton-item skeleton-pulse large"></div>
+                <div class="subtitle-skeleton skeleton-item skeleton-pulse medium"></div>
+            </div>
+            <div class="filter-skeleton">
+                <div class="filter-item skeleton-item skeleton-pulse short"></div>
+                <div class="filter-item skeleton-item skeleton-pulse short"></div>
+                <div class="filter-item skeleton-item skeleton-pulse short"></div>
+            </div>
+            <div class="product-groups-skeleton">
+                <div class="group-skeleton skeleton-item skeleton-pulse"></div>
+                <div class="group-skeleton skeleton-item skeleton-pulse"></div>
+                <div class="group-skeleton skeleton-item skeleton-pulse"></div>
             </div>
         </div>
 
-        <!-- Nội dung thực tế -->
-        <div class="real-content" style="display: none;">
-            <section class="hero" data-aos="fade-up">
-                <div class="hero-inner">
-                    <h1 data-i18n="home.heroTitle" class="hero-title">VIN PRIME CO., LTD</h1>
-                    <p data-i18n="home.heroSub" class="hero-sub">ALL THE BEST PRODUCTS FOR YOUR LIVESTOCK FARMING</p>
+        <!-- All Products Content -->
+        <div class="all-products-content" style="display: none;">
+            <!-- Page Header with Background Image -->
+            <section class="page-header" data-aos="fade-up">
+                <div class="hero-image">
+                    <img src="/assets/images/root/hero.jpg" alt="Tất cả sản phẩm VinPrime" loading="lazy"
+                        onerror="this.src='/assets/images/placeholder.jpg'">
+                </div>
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <i class="fas fa-boxes"></i>
+                        <span data-i18n="products.title">TẤT CẢ SẢN PHẨM</span>
+                    </h1>
+                    <p class="page-subtitle" data-i18n="products.subtitle">
+                        Nguyên liệu chất lượng cao cho chăn nuôi và công nghiệp
+                    </p> 
                 </div>
             </section>
 
-            <section class="intro" data-aos="fade-up">
-                <div style="background: #f0f0f0; padding: 40px; text-align: center;">
-                    <h2>TEST INTRO SECTION</h2>
-                    <p>Nếu thấy cái này nghĩa là section intro tồn tại</p>
-                </div>
-            </section>
-            <section class="featured activitie-list" id="home-activities" data-aos="fade-up">
-                <!-- activities.js sẽ render hoạt động nổi bật -->
-            </section>
-            <section class="featured product-list" id="home-products" data-aos="fade-up">
-                <!-- product.js sẽ render sản phẩm nổi bật -->
-            </section>
-            <section class="quotation-section" id="home-quotation" data-aos="fade-up">
-                <!-- quotation.js sẽ render -->
-            </section>
+            <!-- Quick Navigation -->
+            <nav class="group-navigation" id="group-navigation" data-aos="fade-up">
+                <!-- Group navigation links will be loaded here -->
+            </nav>
+
+            <!-- All Products Container -->
+            <div class="all-products-container">
+                <!-- Product Groups will be loaded here -->
+                <div id="products-container"></div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="back-to-top-container" data-aos="fade-up">
+                <a href="#group-navigation" class="back-to-top-btn">
+                    <i class="fas fa-arrow-up"></i>
+                    <span data-i18n="misc.goToTop">Về đầu trang</span>
+                </a>
+            </div>
         </div>
     </main>
 
     <footer></footer>
+
     <!-- JavaScript Libraries -->
     <script src="assets/js/aos.js"></script>
-    <!-- JavaScript -->
     <script type="module" src="assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/all-products-page.js"></script>
 </body>
 
 </html>

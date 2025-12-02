@@ -46,18 +46,28 @@ class I18n {
 
         console.log('🔍 Browser language detected:', browserLang, 'Short:', shortLang);
 
-        // Supported languages
-        const supported = ['vi', 'en'];
+        // Supported languages - chỉ dùng 'ja' cho tiếng Nhật
+        const supported = ['ja', 'vi', 'en'];
 
         if (supported.includes(shortLang)) {
             console.log('✅ Browser language is supported:', shortLang);
-            return shortLang;
+            return shortLang; // sẽ trả về 'ja' cho tiếng Nhật
         }
 
-        // Default to Vietnamese if browser language is Vietnamese
-        const finalLang = browserLang.includes('vi') ? 'vi' : 'en';
-        console.log('📝 Final detected language:', finalLang);
-        return finalLang;
+        // Default logic
+        if (browserLang.includes('vi')) {
+            console.log('📝 Final detected language: vi');
+            return 'vi';
+        }
+
+        // Kiểm tra tiếng Nhật trong chuỗi đầy đủ
+        if (browserLang.includes('ja')) {
+            console.log('📝 Final detected language: ja');
+            return 'ja';
+        }
+
+        console.log('📝 Final detected language: en');
+        return 'en';
     }
 
     async loadLanguage(lang) {
@@ -242,7 +252,9 @@ class I18n {
         const languages = {
             'vi': { name: '🇻🇳 Tiếng Việt', short: 'VI' },
             'en': { name: '🇺🇸 English', short: 'EN' },
+            'ja': { name: '🇯🇵 日本語', short: 'JA' }
         };
+
 
         console.log('🔄 Updating language switcher UI');
 

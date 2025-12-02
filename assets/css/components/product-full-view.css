@@ -1,0 +1,126 @@
+/* Product Full View Component Styles */
+
+/* Product Image Gallery Enhancements */
+.product-full-gallery {
+    position: relative;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 70%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+}
+
+/* Enhanced Specifications */
+.spec-row {
+    position: relative;
+    padding-left: 20px;
+}
+
+.spec-row::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Process Steps Enhancement */
+.process-step {
+    position: relative;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: var(--primary-color);
+    opacity: 0.3;
+}
+
+.process-step:last-child::before {
+    display: none;
+}
+
+.step-number {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+/* Packaging Info Enhancement */
+.packaging-info {
+    position: relative;
+    overflow: hidden;
+}
+
+.packaging-info::before {
+    content: '📦';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 3rem;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+/* Badge Animations */
+.badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.badge::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent 20%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 80%
+    );
+    transform: rotate(30deg);
+    transition: transform 0.5s ease;
+}
+
+.badge:hover::after {
+    transform: rotate(30deg) translateX(100%);
+}
+
+/* Content Fade In Animation */
+@keyframes contentFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-full-details > * {
+    animation: contentFadeIn 0.6s ease-out;
+}
+
+.product-full-details > *:nth-child(1) { animation-delay: 0.1s; }
+.product-full-details > *:nth-child(2) { animation-delay: 0.2s; }
+.product-full-details > *:nth-child(3) { animation-delay: 0.3s; }
+.product-full-details > *:nth-child(4) { animation-delay: 0.4s; }
+ 

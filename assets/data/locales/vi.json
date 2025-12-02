@@ -60,6 +60,7 @@
     "downloadCatalog": "Tải catalogue",
     "process": "Quy trình sản xuất",
     "packaging": "Quy cách đóng gói",
+    "technicalspecs": "Thông số kỹ thuật",
     "related": "Sản phẩm liên quan",
     "viewAll": "Xem tất cả",
     "highQuality": "Chất lượng cao",
@@ -265,6 +266,8 @@
     "tax_code": "Mã Số Thuế",
     "working_hours": "Giờ Làm Việc",
     "mission": "Sứ Mệnh",
-    "vision": "Tầm Nhìn"
+    "vision": "Tầm Nhìn",
+    "groupNavigation": "NHANH CHUYỂN NHÓM",
+    "goToTop": "Lên đầu trang"
   }
 }
