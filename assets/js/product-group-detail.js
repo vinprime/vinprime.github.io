@@ -122,17 +122,17 @@ class ProductGroupDetail {
         // Ẩn các phần không cần thiết cho trang nhóm
         const descriptionEl = document.getElementById('product-description');
         const processEl = document.querySelector('.product-process');
-        const packagingEl = document.querySelector('.product-packaging'); 
+        const packagingEl = document.querySelector('.product-packaging');
 
         if (descriptionEl) if (descriptionEl) {
             descriptionEl.innerHTML = `<span>${this.groupData.description}</span>`;
-        } 
+        }
         if (processEl) if (processEl) {
             processEl.innerHTML = `<span>${this.groupData.process_steps}</span>`;
         }
         if (packagingEl) if (packagingEl) {
             packagingEl.innerHTML = `<span>${this.groupData.packing}</span>`;
-        }  
+        }
 
         // Ẩn gallery
         const galleryEl = document.querySelector('.product-gallery');
@@ -229,42 +229,22 @@ class ProductGroupDetail {
         // Render tất cả sản phẩm trong nhóm với swiper cho mỗi sản phẩm
         relatedProductsEl.innerHTML = this.products.map((product, index) => `
         <div class="related-product-card" data-aos="fade-up">
+                <h3>${product.name}</h3>
             <div class="related-product-image">
                 ${this.renderProductSwiper(product, index)}
             </div>
             <div class="related-product-info">
-                <h3>${product.name}</h3>
                 <p>${this.getShortDescription(product.description)}</p>
-                <div class="product-actions" style="margin-top: 15px;">
-                    <a href="product-detail.html?id=${product.key}" class="btn btn-outline" style="
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 5px;
-                        padding: 8px 16px;
-                        border: 1px solid #007bff;
-                        color: #007bff;
-                        text-decoration: none;
-                        border-radius: 4px;
-                        font-size: 14px;
-                    ">
-                        <i class="fas fa-info-circle"></i>
-                        <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
-                    </a>
-                    <a href="index.html#get-contact?product=${product.key}" class="btn btn-primary" style="
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 5px;
-                        padding: 8px 16px;
-                        background: #007bff;
-                        color: white;
-                        text-decoration: none;
-                        border-radius: 4px;
-                        font-size: 14px;
-                    ">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>${window.i18n.t('misc.contact') || 'Đặt hàng'}</span>
-                    </a>
-                </div>
+                <div class="product-actions">
+    <a href="product-detail.html?id=${product.key}" class="btn btn-outline">
+        <i class="fas fa-info-circle"></i>
+        <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
+    </a>
+    <a href="index.html#get-contact?product=${product.key}" class="btn btn-primary">
+        <i class="fas fa-shopping-cart"></i>
+        <span>${window.i18n.t('misc.contact') || 'Đặt hàng'}</span>
+    </a>
+</div>
             </div>
         </div>
     `).join('');
@@ -361,58 +341,6 @@ class ProductGroupDetail {
                     if (swiperEl && nextEl && prevEl) {
                         try {
                             console.log(`Initializing swiper for product ${index}...`);
-
-                            const swiper = new Swiper(swiperSelector, {
-                                slidesPerView: 1,
-                                spaceBetween: 0,
-                                loop: true,
-                                pagination: {
-                                    el: paginationSelector,
-                                    clickable: true,
-                                },
-                                navigation: {
-                                    nextEl: nextSelector,
-                                    prevEl: prevSelector,
-                                    disabledClass: 'swiper-button-disabled',
-                                    hiddenClass: 'swiper-button-hidden',
-                                },
-                                autoplay: {
-                                    delay: 3000,
-                                    disableOnInteraction: true,
-                                },
-                                effect: 'fade',
-                                fadeEffect: {
-                                    crossFade: true
-                                },
-                                on: {
-                                    init: function () {
-                                        console.log(`✅ Swiper ${index} initialized successfully`);
-                                        console.log(`   Navigation nextEl:`, this.navigation.nextEl);
-                                        console.log(`   Navigation prevEl:`, this.navigation.prevEl);
-                                        console.log(`   Navigation enabled:`, this.navigation);
-                                    },
-                                    beforeInit: function () {
-                                        console.log(`🔄 Swiper ${index} before init`);
-                                    },
-                                    afterInit: function () {
-                                        console.log(`🎉 Swiper ${index} after init`);
-                                    }
-                                }
-                            });
-
-                            // Lưu instance
-                            this.swiperInstances[`product-${index}`] = swiper;
-
-                            // Test navigation
-                            setTimeout(() => {
-                                console.log(`Testing swiper ${index} navigation...`);
-                                console.log(`Swiper.navigation:`, swiper.navigation);
-                                console.log(`Next button exists:`, swiper.navigation.nextEl);
-                                console.log(`Prev button exists:`, swiper.navigation.prevEl);
-
-                                // Thêm manual click handlers nếu cần
-                                this.addManualClickHandlers(index, swiper);
-                            }, 500);
 
                         } catch (error) {
                             console.error(`❌ Failed to initialize swiper ${index}:`, error);

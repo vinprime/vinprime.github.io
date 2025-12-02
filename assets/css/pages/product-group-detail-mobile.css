@@ -1,0 +1,669 @@
+/* ===== PRODUCT DETAIL PAGE MOBILE (0-767px) ===== */
+@media (max-width: 767px) {
+
+    /* ===== CONTAINER & LAYOUT - THÊM PADDING ===== */
+    .product-group-detail-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        margin: 20px 0 !important;
+        padding: 0 20px !important;
+        /* THÊM PADDING TRÁI PHẢI */
+    }
+
+    /* ===== BREADCRUMB - THÊM PADDING ===== */
+    .breadcrumb {
+        margin: 15px 20px !important;
+        /* Cùng padding với container */
+        font-size: 13px !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+
+    /* ===== PRODUCT GALLERY MOBILE ===== */
+    .product-group-gallery {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    .main-image-container {
+        margin-bottom: 15px !important;
+    }
+
+    .main-image-swiper {
+        height: 350px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px !important;
+        height: 40px !important;
+        display: none !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    /* Thumbnail Gallery Mobile */
+    .thumbnail-container {
+        margin-top: 5px !important;
+    }
+
+    .thumbnail-swiper .swiper-slide {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    /* ===== PRODUCT INFORMATION MOBILE ===== */
+    .product-group-info {
+        padding: 0 !important;
+    }
+
+    .product-group-header {
+        margin-bottom: 25px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .product-group-title {
+        font-size: 24px !important;
+        margin: 8px 0 !important;
+        line-height: 1.3 !important;
+    }
+
+    .product-group-badges {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-top: 12px !important;
+    }
+
+    .badge {
+        padding: 5px 10px !important;
+        font-size: 11px !important;
+    }
+
+    /* ===== PRODUCT DESCRIPTION MOBILE ===== */
+    .product-description {
+        margin: 20px 0 25px !important;
+        padding: 15px 0 !important;
+    }
+
+    .product-description h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    .product-description p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .product-description ul,
+    .product-description ol {
+        margin-left: 15px !important;
+        padding-left: 10px !important;
+    }
+
+    .product-description table {
+        font-size: 0.85rem !important;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 15px -10px !important;
+        /* Tạo khoảng đệm cho table scroll */
+        padding: 0 10px !important;
+    }
+
+    .product-description th,
+    .product-description td {
+        padding: 8px 12px !important;
+        /* Tăng padding trong table */
+        min-width: 100px;
+        /* Đảm bảo ô không quá nhỏ */
+    }
+
+    /* ===== PROCESS STEPS MOBILE - THÊM PADDING ===== */
+    .product-group-process {
+        margin: 30px 0 !important;
+        padding: 25px 20px !important;
+        /* THÊM PADDING TRÁI PHẢI */
+        border-radius: 12px !important;
+    }
+
+    .product-group-process h2 {
+        font-size: 20px !important;
+        margin-bottom: 20px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .process-step {
+        padding: 15px 15px 15px 60px !important;
+        margin-bottom: 15px !important;
+        border-radius: 10px !important;
+    }
+
+    .process-step:before {
+        left: 15px !important;
+        top: 15px !important;
+        width: 25px !important;
+        height: 25px !important;
+        font-size: 14px !important;
+    }
+
+    .process-step h3 {
+        font-size: 16px !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* ===== PACKAGING MOBILE - THÊM PADDING ===== */
+    .product-group-packaging {
+        margin: 25px 0 !important;
+        padding: 25px 20px !important;
+        /* THÊM PADDING TRÁI PHẢI */
+        border-radius: 12px !important;
+    }
+
+    .product-group-packaging h2 {
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .packing-info {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* ===== PRODUCT ACTIONS MOBILE ===== */
+    .product-group-actions {
+        margin: 30px 0 !important;
+        gap: 15px !important;
+        flex-direction: column !important;
+    }
+
+    .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 16px 24px !important;
+        font-size: 16px !important;
+        min-height: 52px !important;
+        border-radius: 10px !important;
+    }
+
+    /* ===== SHARE BUTTONS MOBILE - THÊM PADDING ===== */
+    .product-group-share {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 25px 0 !important;
+        /* TĂNG PADDING TRÊN DƯỚI */
+        margin: 20px 0 !important;
+    }
+
+    .share-buttons {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 5px 0 !important;
+    }
+
+    .share-btn {
+        width: 44px !important;
+        /* Tăng kích thước cho dễ chạm */
+        height: 44px !important;
+    }
+
+    /* ===== RELATED PRODUCTS MOBILE - THÊM PADDING ===== */
+    .related-products {
+        margin: 40px 0 !important;
+        padding: 0 20px !important;
+        /* THÊM PADDING TRÁI PHẢI */
+    }
+
+    .section-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+        margin-bottom: 25px !important;
+        padding: 0 5px !important;
+    }
+
+    .section-header h2 {
+        font-size: 22px !important;
+    }
+
+    .related-products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+        /* TĂNG GAP GIỮA CÁC CARD */
+        padding: 0 5px !important;
+    }
+
+    .related-product-group-card {
+        margin: 0 5px !important;
+        /* THÊM MARGIN CHO CARD */
+    }
+
+    .related-product-image,
+    .related-product-group-image {
+        height: 280px !important;
+
+    }
+
+    .related-product-image {
+        width: 100%;
+        /* Đảm bảo chiếm full width */
+        aspect-ratio: 4/3;
+        /* Tỷ lệ 4:3 - thay đổi theo nhu cầu */
+    }
+
+    /* Đảm bảo ảnh fit hoàn hảo */
+    .related-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* QUAN TRỌNG: Cắt ảnh để vừa container */
+        object-position: center;
+        /* Căn giữa ảnh */
+        display: block;
+        /* Tránh khoảng trắng dưới ảnh */
+    }
+
+    .product-mini-swiper .swiper-button-next,
+    .product-mini-swiper .swiper-button-prev {
+        display: none !important;
+    }
+
+    .related-product-group-info {
+        padding: 20px !important;
+        /* TĂNG PADDING TRONG CARD */
+    }
+
+    .related-product-group-info h3 {
+        font-size: 16px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .related-product-group-info p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* ===== SKELETON LOADING MOBILE - THÊM PADDING ===== */
+    .product-group-loading {
+        padding: 30px 20px !important;
+        /* THÊM PADDING */
+    }
+
+    .product-group-gallery-skeleton,
+    .product-group-info-skeleton {
+        width: 100% !important;
+    }
+
+    .product-group-gallery-skeleton {
+        height: 350px !important;
+        border-radius: 12px !important;
+    }
+
+    .title-skeleton {
+        height: 32px !important;
+        width: 80% !important;
+        margin: 10px 0 20px !important;
+    }
+
+    .text-skeleton {
+        height: 18px !important;
+        margin: 8px 0 !important;
+        border-radius: 4px !important;
+    }
+
+    /* ===== NOT FOUND MOBILE - THÊM PADDING ===== */
+    .product-group-not-found {
+        padding: 50px 20px !important;
+        /* TĂNG PADDING */
+        min-height: 50vh !important;
+    }
+
+    .product-group-not-found h2 {
+        font-size: 22px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .product-group-not-found p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        padding: 0 10px !important;
+    }
+
+    .product-group-not-found .btn-group {
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-top: 25px !important;
+        gap: 12px !important;
+    }
+
+    .product-group-not-found .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 16px 24px !important;
+        border-radius: 10px !important;
+    }
+
+    /* ===== COPY NOTIFICATION MOBILE ===== */
+    .copy-notification {
+        top: 80px !important;
+        right: 20px !important;
+        /* GIẢM TỪ 10px LÊN 20px */
+        left: 20px !important;
+        /* GIẢM TỪ 10px LÊN 20px */
+        text-align: center !important;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* ===== SMALL MOBILE (0-480px) - ĐIỀU CHỈNH PADDING ===== */
+@media (max-width: 480px) {
+    .product-group-detail-container {
+        padding: 0 16px !important;
+        /* GIẢM XUỐNG 16px */
+    }
+
+    .breadcrumb {
+        margin: 15px 16px !important;
+    }
+
+    .main-image-swiper {
+        height: 300px !important;
+    }
+
+    .product-group-title {
+        font-size: 22px !important;
+    }
+
+    .thumbnail-swiper .swiper-slide {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .product-group-process,
+    .product-group-packaging {
+        padding: 20px 16px !important;
+    }
+
+    .product-group-process h2,
+    .product-group-packaging h2,
+    .section-header h2 {
+        font-size: 18px !important;
+    }
+
+    .process-step {
+        padding: 12px 12px 12px 55px !important;
+    }
+
+    .btn {
+        padding: 14px 20px !important;
+        font-size: 15px !important;
+    }
+
+    .related-products {
+        padding: 0 16px !important;
+    }
+
+    .related-product-image,
+    .related-product-group-image {
+        height: 160px !important;
+    }
+
+
+    .related-product-image {
+        width: 100%;
+        /* Đảm bảo chiếm full width */
+        aspect-ratio: 4/3;
+        /* Tỷ lệ 4:3 - thay đổi theo nhu cầu */
+    }
+    /* Đảm bảo ảnh fit hoàn hảo */
+    .related-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* QUAN TRỌNG: Cắt ảnh để vừa container */
+        object-position: center;
+        /* Căn giữa ảnh */
+        display: block;
+        /* Tránh khoảng trắng dưới ảnh */
+    }
+
+    .product-group-gallery-skeleton {
+        height: 300px !important;
+    }
+
+    .product-group-not-found {
+        padding: 40px 16px !important;
+    }
+
+    .copy-notification {
+        right: 16px !important;
+        left: 16px !important;
+    }
+}
+
+/* ===== VERY SMALL MOBILE (0-360px) - ĐIỀU CHỈNH PADDING ===== */
+@media (max-width: 360px) {
+    .product-group-detail-container {
+        padding: 0 14px !important;
+        /* GIẢM XUỐNG 14px */
+    }
+
+    .breadcrumb {
+        margin: 15px 14px !important;
+    }
+
+    .main-image-swiper {
+        height: 280px !important;
+    }
+
+    .product-group-title {
+        font-size: 20px !important;
+    }
+
+    .thumbnail-swiper .swiper-slide {
+        width: 65px !important;
+        height: 65px !important;
+    }
+
+    .product-group-process,
+    .product-group-packaging {
+        padding: 18px 14px !important;
+    }
+
+    .process-step:before {
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 12px !important;
+    }
+
+    .related-products {
+        padding: 0 14px !important;
+    }
+
+    .related-product-image,
+    .related-product-group-image {
+        height: 280px !important;
+    }
+
+
+    .related-product-image {
+        width: 100%;
+        /* Đảm bảo chiếm full width */
+        aspect-ratio: 4/3;
+        /* Tỷ lệ 4:3 - thay đổi theo nhu cầu */
+    }
+    /* Đảm bảo ảnh fit hoàn hảo */
+    .related-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* QUAN TRỌNG: Cắt ảnh để vừa container */
+        object-position: center;
+        /* Căn giữa ảnh */
+        display: block;
+        /* Tránh khoảng trắng dưới ảnh */
+    }
+
+    /* Đảm bảo ảnh fit hoàn hảo */
+    .related-product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* QUAN TRỌNG: Cắt ảnh để vừa container */
+        object-position: center;
+        /* Căn giữa ảnh */
+        display: block;
+        /* Tránh khoảng trắng dưới ảnh */
+    }
+
+    .product-group-gallery-skeleton {
+        height: 280px !important;
+    }
+
+    .product-group-not-found {
+        padding: 35px 14px !important;
+    }
+
+    .copy-notification {
+        right: 14px !important;
+        left: 14px !important;
+        padding: 10px 16px !important;
+    }
+}
+
+/* ===== TABLET (768px - 1023px) - ĐIỀU CHỈNH PADDING ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-group-detail-container {
+        gap: 30px !important;
+        padding: 0 24px !important;
+        /* TĂNG PADDING CHO TABLET */
+    }
+
+    .breadcrumb {
+        margin: 20px 24px !important;
+    }
+
+    .main-image-swiper {
+        height: 400px !important;
+    }
+
+    .product-group-title {
+        font-size: 28px !important;
+    }
+
+    .thumbnail-swiper .swiper-slide {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .product-group-process,
+    .product-group-packaging {
+        padding: 30px 24px !important;
+    }
+
+    .related-products {
+        padding: 0 24px !important;
+    }
+
+    .related-products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px !important;
+        padding: 0 5px !important;
+    }
+}
+
+/* ===== THÊM PADDING CHO CÁC PHẦN TỬ NHỎ KHÁC ===== */
+@media (max-width: 767px) {
+
+    /* Product description list items */
+    .product-description li {
+        padding-left: 12px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Highlight box */
+    .product-description .highlight {
+        padding: 15px 18px !important;
+        margin: 18px 0 !important;
+    }
+
+    /* Badges */
+    .badge {
+        margin: 2px !important;
+    }
+
+    /* View all link */
+    .view-all {
+        padding: 8px 0 !important;
+    }
+
+    /* Related product link */
+    .related-product-group-link {
+        padding: 8px 0 !important;
+    }
+}
+
+/* ===== PRODUCT ACTIONS MOBILE ===== */
+@media (max-width: 767px) {
+    .product-actions {
+        margin-top: 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        /* Cho phép xuống dòng nếu cần */
+    }
+
+    .product-actions .btn {
+        padding: 10px 16px;
+        /* Tăng padding cho dễ chạm */
+        font-size: 15px;
+        min-height: 44px;
+        /* Đảm bảo kích thước touch-friendly */
+        flex: 1;
+        /* Các nút chiếm không gian bằng nhau */
+        justify-content: center;
+        /* Căn giữa nội dung */
+        min-width: 120px;
+        /* Độ rộng tối thiểu */
+    }
+
+    .product-actions .btn i {
+        font-size: 16px;
+        /* Tăng kích thước icon trên mobile */
+    }
+
+    /* Trên mobile nhỏ, chuyển thành cột */
+    @media (max-width: 480px) {
+        .product-actions {
+            flex-direction: column;
+            /* Xếp dọc */
+            gap: 10px;
+        }
+
+        .product-actions .btn {
+            width: 100%;
+            /* Chiếm full width */
+            min-width: 100%;
+        }
+    }
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-actions .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
