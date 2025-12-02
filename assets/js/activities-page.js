@@ -96,7 +96,7 @@ class ActivitiesPage {
 
         navEl.innerHTML = `
             <div class="activities-navigation-title">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-list"></i>
                 <span data-i18n="activities.navigationTitle">Lĩnh vực hoạt động</span>
             </div>
             <div class="activities-nav-links">
