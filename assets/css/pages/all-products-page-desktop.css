@@ -62,18 +62,7 @@
     padding-bottom: 20px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
-
-.page-header .page-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: white;
-    border-radius: 2px;
-}
+ 
 
 .page-header .page-subtitle {
     font-size: 1.3rem;
@@ -415,7 +404,8 @@
     line-height: 1.7;
     color: var(--text-medium);
     margin-bottom: 20px;
-    white-space: pre-line;
+    white-space: pre-line; 
+    text-align: justify;
 }
 
 .product-full-description h4 {

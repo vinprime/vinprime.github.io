@@ -1,0 +1,467 @@
+/* ========== MOBILE RESPONSIVE STYLES - DIFFERENT LAYOUT ========== */
+@media (max-width: 768px) {
+    /* ========== PAGE HEADER MOBILE ========== */
+    .page-header {
+        padding: 70px 0 40px;
+        min-height: 300px;
+        height: auto;
+        max-height: 60vh;
+        margin-bottom: 30px;
+    }
+    
+    .page-header .header-content {
+        padding: 0 15px;
+    }
+    
+    .page-header .page-title {
+        font-size: 2rem;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .page-header .page-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .page-header .page-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+    
+    /* ========== SUMMARY ITEMS MOBILE ========== */
+    .page-header .summary-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    
+    .page-header .summary-item {
+        padding: 15px 10px;
+        min-width: auto;
+        backdrop-filter: blur(5px);
+    }
+    
+    .page-header .summary-item i {
+        font-size: 1.5rem;
+        margin-bottom: 3px;
+    }
+    
+    .page-header .summary-item span {
+        font-size: 1rem;
+    }
+    
+    .page-header .summary-item small {
+        font-size: 0.8rem;
+    }
+    
+    /* ========== GROUP NAVIGATION MOBILE ========== */
+    .group-navigation {
+        padding: 15px;
+        margin: -20px 15px 30px;
+        border-radius: 6px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        overflow-x: auto;
+    }
+    
+    .navigation-title {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .group-nav-links {
+        display: flex;
+        gap: 8px;
+        flex-wrap: nowrap;
+        padding-bottom: 5px;
+        min-width: min-content;
+    }
+    
+    .group-nav-link {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    /* ========== PRODUCT GROUP SECTION MOBILE ========== */
+    .product-group-section {
+        margin-bottom: 40px;
+        border-radius: 6px;
+        margin: 0 15px 40px;
+        scroll-margin-top: 80px;
+    }
+    
+    .group-header {
+        padding: 20px;
+    }
+    
+    .group-title {
+        font-size: 1.3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .group-title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .group-count {
+        align-self: flex-start;
+        font-size: 0.85rem;
+    }
+    
+    /* ========== GROUP DESCRIPTION MOBILE ========== */
+    .group-description {
+        padding: 20px;
+    }
+    
+    .group-description-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .group-description-content h3 {
+        font-size: 1.1rem;
+        margin: 20px 0 12px;
+    }
+    
+    .group-description-content table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .group-description-content th,
+    .group-description-content td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .group-description-content .highlight {
+        padding: 12px 15px;
+        margin: 15px 0;
+    }
+    
+    /* ========== PRODUCTS GRID MOBILE ========== */
+    .products-full-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    /* ========== PRODUCT CARD MOBILE ========== */
+    .product-full-card {
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .product-full-header {
+        padding: 15px;
+    }
+    
+    .product-full-name {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .product-badges {
+        gap: 8px;
+    }
+    
+    .badge {
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
+    
+    /* ========== PRODUCT GALLERY MOBILE ========== */
+    .product-full-gallery {
+        height: 200px;
+    }
+    
+    .image-counter {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+    
+    /* ========== PRODUCT DETAILS MOBILE ========== */
+    .product-full-details {
+        padding: 20px;
+    }
+    
+    .product-full-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .product-full-description h4 {
+        font-size: 1rem;
+        margin: 15px 0 8px;
+    }
+    
+    .product-specifications {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .product-specifications h5 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .spec-row {
+        flex-direction: column;
+        padding: 6px 0;
+        gap: 3px;
+    }
+    
+    .spec-label {
+        flex: none;
+        font-size: 0.9rem;
+    }
+    
+    .spec-value {
+        flex: none;
+        font-size: 0.9rem;
+    }
+    
+    /* ========== PROCESS STEPS MOBILE ========== */
+    .product-process-steps {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .process-title {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .process-steps {
+        gap: 12px;
+    }
+    
+    .process-step {
+        gap: 12px;
+    }
+    
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.85rem;
+    }
+    
+    .step-content h6 {
+        font-size: 0.95rem;
+    }
+    
+    .step-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* ========== PACKAGING INFO MOBILE ========== */
+    .packaging-info {
+        padding: 12px;
+        margin-top: 15px;
+    }
+    
+    .packaging-title {
+        font-size: 0.95rem;
+    }
+    
+    .packaging-details {
+        font-size: 0.9rem;
+    }
+    
+    /* ========== EMPTY STATE MOBILE ========== */
+    .empty-products {
+        padding: 30px 15px;
+    }
+    
+    .empty-products i {
+        font-size: 2.5rem;
+    }
+    
+    .empty-products h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* ========== BACK TO TOP MOBILE ========== */
+    .back-to-top-container {
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+    
+    .back-to-top-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== SMALL MOBILE DEVICES ========== */
+@media (max-width: 480px) {
+    .page-header {
+        padding: 50px 0 30px;
+        min-height: 250px;
+    }
+    
+    .page-header .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .page-header .page-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .page-header .summary-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .page-header .summary-item {
+        padding: 12px;
+    }
+    
+    /* ========== GROUP NAVIGATION ========== */
+    .group-navigation {
+        margin: -15px 10px 25px;
+        padding: 12px;
+    }
+    
+    /* ========== PRODUCT GROUP ========== */
+    .product-group-section {
+        margin: 0 10px 30px;
+    }
+    
+    .group-title {
+        font-size: 1.1rem;
+    }
+    
+    .products-full-grid {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .product-full-gallery {
+        height: 180px;
+    }
+    
+    /* ========== PROCESS STEPS STACKED ========== */
+    .process-step {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+    }
+    
+    /* ========== SCROLLING GROUP NAVIGATION ========== */
+    .group-nav-links {
+        padding-bottom: 10px;
+    }
+    
+    .group-nav-links::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .group-nav-links::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 2px;
+    }
+}
+
+/* ========== TABLET ADJUSTMENTS ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page-header {
+        padding: 80px 0 50px;
+        min-height: 350px;
+    }
+    
+    .page-header .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-header .summary-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .products-full-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .product-group-section {
+        margin: 0 20px 50px;
+    }
+}
+
+/* ========== MOBILE-SPECIFIC UTILITIES ========== */
+@media (max-width: 768px) {
+    /* Hide complex elements on mobile */
+    .product-full-description h4 + p {
+        display: none;
+    }
+    
+    /* Show "Read more" functionality */
+    .product-full-description.collapsed {
+        max-height: 100px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .product-full-description.collapsed::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: linear-gradient(transparent, var(--bg-white));
+    }
+    
+    /* Mobile tap targets */
+    .group-nav-link,
+    .back-to-top-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve touch scrolling */
+    .group-description-content {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* ========== DARK MODE MOBILE SUPPORT ========== */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .group-navigation {
+        background: #2c2c2c;
+        border-color: #404040;
+    }
+    
+    .product-group-section {
+        background: #2c2c2c;
+        border-color: #404040;
+    }
+    
+    .product-full-card {
+        background: #2c2c2c;
+        border-color: #404040;
+    }
+    
+    .group-header {
+        background: #333;
+        border-color: #404040;
+    }
+}

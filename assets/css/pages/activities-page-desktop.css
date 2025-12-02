@@ -1,0 +1,383 @@
+/* ========== ACTIVITIES PAGE - DESKTOP STYLES ========== */
+:root {
+    --activity-primary: #2c3e50;
+    --activity-secondary: #3498db;
+    --activity-accent: #e74c3c;
+    --activity-light: #f8f9fa;
+    --activity-border: #e0e0e0;
+}
+
+/* ========== PAGE HEADER ========== */
+.activities-header {
+    position: relative;
+    padding: 100px 0 60px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.activities-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+}
+
+.activities-header .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.activities-header .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7);
+}
+
+.activities-header .header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.activities-header .page-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.activities-header .page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.activities-header .page-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ========== ACTIVITIES OVERVIEW ========== */
+.activities-overview {
+    background: var(--activity-light);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 0 auto 40px;
+    max-width: 1200px;
+    border: 1px solid var(--activity-border);
+}
+
+.overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overview-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--activity-primary);
+}
+
+/* ========== ACTIVITIES NAVIGATION ========== */
+.activities-navigation {
+    background: var(--bg-white);
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 0 auto 40px;
+    border: 1px solid var(--activity-border);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    max-width: 1200px;
+}
+
+.activities-navigation-title {
+    font-size: 1rem;
+    color: var(--activity-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.activities-navigation-title i {
+    color: var(--activity-secondary);
+}
+
+.activities-nav-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.activity-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--bg-white);
+    color: var(--activity-primary);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 2px solid var(--activity-border);
+    transition: all 0.3s ease;
+}
+
+.activity-nav-link:hover {
+    background: var(--activity-secondary);
+    color: white;
+    border-color: var(--activity-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.activity-nav-link.active {
+    background: var(--activity-secondary);
+    color: white;
+    border-color: var(--activity-secondary);
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* ========== ACTIVITIES CONTAINER ========== */
+.activities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== ACTIVITY SECTION ========== */
+.activity-section {
+    margin-bottom: 80px;
+    scroll-margin-top: 100px;
+    background: var(--bg-white);
+    border: 1px solid var(--activity-border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.activity-header {
+    padding: 30px;
+    background: linear-gradient(135deg, var(--activity-primary), var(--activity-secondary));
+    color: white;
+}
+
+.activity-title-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.activity-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.activity-title {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+}
+
+/* ========== ACTIVITY CONTENT ========== */
+.activity-content {
+    padding: 40px;
+}
+
+.activity-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--activity-primary);
+    margin-bottom: 30px;
+}
+
+/* ========== ACTIVITY DETAILS ========== */
+.activity-details {
+    background: var(--activity-light);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.details-title {
+    font-size: 1.3rem;
+    color: var(--activity-primary);
+    margin: 0 0 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.details-title i {
+    color: var(--activity-accent);
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-item {
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--activity-border);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.details-item:last-child {
+    border-bottom: none;
+}
+
+.details-item i {
+    color: var(--activity-secondary);
+    margin-top: 3px;
+    font-size: 1.1rem;
+}
+
+.details-item span {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--activity-primary);
+}
+
+/* ========== ACTIVITY HIGHLIGHTS ========== */
+.activity-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.highlight-card {
+    background: white;
+    border: 1px solid var(--activity-border);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    color: var(--activity-secondary);
+    margin-bottom: 15px;
+}
+
+.highlight-title {
+    font-size: 1.2rem;
+    color: var(--activity-primary);
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.highlight-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* ========== EMPTY STATE ========== */
+.empty-activities {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    background: var(--activity-light);
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.empty-activities i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-activities h3 {
+    font-size: 1.5rem;
+    color: var(--activity-primary);
+    margin-bottom: 10px;
+}
+
+/* ========== BACK TO TOP ========== */
+.back-to-top-container {
+    text-align: center;
+    padding: 60px 0 40px;
+    margin-top: 40px;
+}
+
+.back-to-top-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: var(--activity-secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background: var(--activity-primary);
+    transform: translateY(-2px);
+}

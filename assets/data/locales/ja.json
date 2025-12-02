@@ -268,6 +268,8 @@
     "mission": "ミッション",
     "vision": "ビジョン",
     "groupNavigation": "グループクイックナビゲーション",
-    "goToTop": "トップへ戻る"
+    "goToTop": "トップへ戻る",
+    "noProductsInGroup": "このグループには商品がありません",
+    "productsUpdating": "商品は更新中です。しばらくしてから再度ご確認ください。" 
   }
 }

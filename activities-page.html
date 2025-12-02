@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-i18n="activities.pageTitle">Hoạt động - VinPrime</title>
+    <meta name="description"
+        content="Các lĩnh vực hoạt động chính của VinPrime - Sản xuất, xuất khẩu và thương mại nguyên liệu chăn nuôi công nghiệp">
+
+    <!-- Preload -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/css/pages/activities-page-desktop.css" as="style">
+    <link rel="preload" href="assets/css/pages/activities-page-mobile.css" as="style">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/pages/activities-page-desktop.css">
+    <link rel="stylesheet" href="assets/css/pages/activities-page-mobile.css">
+</head>
+
+<body>
+    <!-- Loading progress bar -->
+    <div class="loading-progress" id="loadingProgress"></div>
+
+    <header></header>
+
+    <main class="container"> 
+
+        <!-- Skeleton loading -->
+        <div class="activities-loading skeleton-loading active">
+            <div class="page-header-skeleton">
+                <div class="title-skeleton skeleton-item skeleton-pulse large"></div>
+                <div class="subtitle-skeleton skeleton-item skeleton-pulse medium"></div>
+            </div>
+            <div class="activities-grid-skeleton">
+                <div class="activity-card-skeleton skeleton-item skeleton-pulse"></div>
+                <div class="activity-card-skeleton skeleton-item skeleton-pulse"></div>
+                <div class="activity-card-skeleton skeleton-item skeleton-pulse"></div>
+                <div class="activity-card-skeleton skeleton-item skeleton-pulse"></div>
+            </div>
+        </div>
+
+        <!-- Activities Content -->
+        <div class="activities-content" style="display: none;">
+            <!-- Page Header with Background Image -->
+            <section class="activities-header" data-aos="fade-up">
+                <div class="hero-image">
+                    <img src="/assets/images/root/hero.jpg" alt="Hoạt động VinPrime" loading="lazy"
+                        onerror="this.src='/assets/images/placeholder.jpg'">
+                </div>
+                <div class="header-content">
+                    <h1 class="page-title">
+                        <span data-i18n="activities.pageTitle">LĨNH VỰC HOẠT ĐỘNG</span>
+                    </h1>
+                    <p class="page-subtitle" data-i18n="activities.pageSubtitle">
+                        Chuyên nghiệp trong từng khâu sản xuất và phân phối
+                    </p>
+                </div>
+            </section>
+
+            <!-- Activities Overview -->
+            <div class="activities-overview" data-aos="fade-up">
+                <div class="overview-content">
+                    <p data-i18n="activities.overview">
+                        VinPrime hoạt động trong 3 lĩnh vực chính: sản xuất nguyên liệu chăn nuôi, 
+                        xuất khẩu sản phẩm chất lượng cao ra thị trường quốc tế, và thương mại 
+                        phân phối nguyên liệu trên toàn quốc.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <nav class="activities-navigation" id="activities-navigation" data-aos="fade-up">
+                <!-- Activities navigation links will be loaded here -->
+            </nav>
+
+            <!-- All Activities Container -->
+            <div class="activities-container">
+                <!-- Activity Cards will be loaded here -->
+                <div id="activities-list"></div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="back-to-top-container" data-aos="fade-up">
+                <a href="#activities-navigation" class="back-to-top-btn">
+                    <i class="fas fa-arrow-up"></i>
+                    <span data-i18n="misc.goToTop">Về đầu trang</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/activities-page.js"></script>
+</body>
+
+</html>

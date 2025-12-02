@@ -226,8 +226,8 @@ class AllProductsPage {
                 <div class="products-full-grid">
                     <div class="empty-products">
                         <i class="fas fa-box-open fa-3x"></i>
-                        <h3>Chưa có sản phẩm trong nhóm này</h3>
-                        <p>Sản phẩm đang được cập nhật. Vui lòng quay lại sau.</p>
+                        <h3>${window.i18n.t('misc.noProductsInGroup')}</h3>
+                        <p>${window.i18n.t('misc.productsUpdating')}</p>
                     </div>
                 </div>
             `;

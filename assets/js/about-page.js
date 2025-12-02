@@ -91,7 +91,7 @@ class AboutPage {
                  loading="lazy"
                  onerror="this.src='/assets/images/about/default-hero.jpg'">
           </div>
-          <div class="hero-content">
+          <div class="hero-content"> 
             <h1 data-i18n="home.aboutTitle" class="hero-title">Về VinPrime</h1>
             <p data-i18n="home.heroSub" class="hero-subtitle">Cung cấp nguyên liệu sạch, chất lượng cao cho ngành chăn nuôi và công nghiệp</p>
           </div>
