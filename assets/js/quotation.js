@@ -67,7 +67,7 @@ class QuotationSection {
         const { i18nKeyTitle, i18nKeySubtitle, form } = this.quotationData;
 
         return `
-            <div class="quotation-container" id="get-contact">
+            <div class="quotation-container" id="quotation">
                 <div class="quotation-header">
                     <h2 data-i18n="${i18nKeyTitle}" class="section-title">GET QUOTATION</h2>
                     <p data-i18n="${i18nKeySubtitle}" class="section-subtitle">Get the best price for our high-quality products</p>
@@ -332,4 +332,43 @@ Generated from ${this.companyName} Website
 document.addEventListener('DOMContentLoaded', () => {
     const quotationSection = new QuotationSection();
     quotationSection.init();
+});
+
+// Đợi trang load xong
+document.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash; // #product-key123
+    if (hash) {
+        // Đợi thêm chút để đảm bảo mọi thứ render xong
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 500);
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrollToId = urlParams.get('scrollTo');
+
+    if (scrollToId) {
+        setTimeout(() => {
+            const element = document.getElementById(scrollToId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 800); // Thời gian chờ dài hơn cho trang load hoàn tất
+    }
 });

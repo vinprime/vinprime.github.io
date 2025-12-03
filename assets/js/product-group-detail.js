@@ -240,7 +240,7 @@ class ProductGroupDetail {
         <i class="fas fa-info-circle"></i>
         <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
     </a>
-    <a href="index.html#get-contact?product=${product.key}" class="btn btn-primary">
+    <a href="index.html?scrollTo=quotation" class="btn btn-primary" target="_blank">
         <i class="fas fa-shopping-cart"></i>
         <span>${window.i18n.t('misc.contact') || 'Đặt hàng'}</span>
     </a>
