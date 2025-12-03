@@ -22,7 +22,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.158); /* chỉnh độ tối */
+    background: rgba(0, 0, 0, 0.384); /* chỉnh độ tối */
 }
 
 /* Nội dung nằm trên overlay */
