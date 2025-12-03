@@ -55,11 +55,27 @@
     
     .activities-nav-links {
         display: flex;
-        gap: 8px;
+        gap: 6px;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding-bottom: 5px;
+        padding: 5px 0 8px;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    /* Ẩn scrollbar trên Chrome, Safari, Edge */
+    .activities-nav-links::-webkit-scrollbar {
+        display: none;
+        height: 3px;
+    }
+    
+    .activities-nav-links::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+    }
+    
+    .activities-nav-links::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
     }
     
     .activity-nav-link {
@@ -176,5 +192,22 @@
     
     .activity-highlights {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .activities-navigation {
+        padding: 15px 20px;
+    }
+    
+    .activity-nav-link {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        min-width: 110px;
+    }
+    
+    .activity-nav-link i {
+        font-size: 1.2rem;
+    }
+    
+    .activity-nav-link span {
+        font-size: 0.85rem;
     }
 }

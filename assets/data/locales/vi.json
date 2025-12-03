@@ -1,7 +1,8 @@
 {
   "site": {
     "name": "VinPrime",
-    "slogan": "Nguyên liệu sạch cho chăn nuôi"
+    "slogan": "Nguyên liệu sạch cho chăn nuôi",
+    "title": "VinPrime - {pageName}"
   },
   "nav": {
     "home": "TRANG CHỦ",

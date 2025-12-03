@@ -1,7 +1,8 @@
 {
   "site": {
     "name": "VinPrime",
-    "slogan": "Clean materials for livestock farming"
+    "slogan": "Clean materials for livestock farming",
+    "title": "VinPrime - {pageName}"
   },
   "nav": {
     "home": "HOME",
@@ -274,6 +275,6 @@
     "groupNavigation": "QUICK GROUP NAVIGATION",
     "goToTop": "Go to top",
     "noProductsInGroup": "There are no products in this group",
-    "productsUpdating": "Products are being updated. Please check back later." 
+    "productsUpdating": "Products are being updated. Please check back later."
   }
 }
