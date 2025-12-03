@@ -199,7 +199,7 @@ async function renderHeaderFooter() {
             <h4 data-i18n="footer.contact">Thông tin liên hệ</h4>
             <p><strong data-i18n="footer.hotline">Hotline:</strong> <a href="tel:${site.phone}">${site.phone}</a></p>
             <p><strong data-i18n="footer.email">Email:</strong> <a href="mailto:${site.email}">${site.email}</a></p>
-            <p><strong data-i18n="footer.workingHours">Giờ làm việc:</strong> ${site.workingHours || '08:00 - 17:00, Thứ 2 - Thứ 7'}</p>
+            <p><strong data-i18n="footer.workingHours">Giờ làm việc:</strong> ${window.i18n.t(`misc.workingHours`) || '08:00 - 17:00, Thứ 2 - Thứ 7'}</p>
              
           </div>
         </div>

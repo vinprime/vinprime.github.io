@@ -279,6 +279,7 @@
     "groupNavigation": "QUICK GROUP NAVIGATION",
     "goToTop": "Go to top",
     "noProductsInGroup": "There are no products in this group",
-    "productsUpdating": "Products are being updated. Please check back later."
+    "productsUpdating": "Products are being updated. Please check back later.",
+    "workingHours": "08:00 - 17:00, Monday - Saturday"
   }
 }

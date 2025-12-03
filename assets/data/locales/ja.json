@@ -275,6 +275,7 @@
     "groupNavigation": "グループクイックナビゲーション",
     "goToTop": "トップへ戻る",
     "noProductsInGroup": "このグループには商品がありません",
-    "productsUpdating": "商品は更新中です。しばらくしてから再度ご確認ください。" 
+    "productsUpdating": "商品は更新中です。しばらくしてから再度ご確認ください。" ,
+    "workingHours": "08:00 - 17:00、月曜日 - 土曜日"
   }
 }
