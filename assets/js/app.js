@@ -80,7 +80,7 @@ async function loadPageContent() {
       }
       break;
 
-    case 'all-products-page.html':
+    case 'products.html':
       if (typeof loadAllProducts === 'function') {
         await loadAllProducts();
       }

@@ -64,6 +64,8 @@ function applyTranslations() {
   }
 }
 
+
+
 async function renderHeaderFooter() {
   try {
     // Hiển thị skeleton loading cho header/footer
@@ -199,7 +201,7 @@ async function renderHeaderFooter() {
             <h4 data-i18n="footer.contact">Thông tin liên hệ</h4>
             <p><strong data-i18n="footer.hotline">Hotline:</strong> <a href="tel:${site.phone}">${site.phone}</a></p>
             <p><strong data-i18n="footer.email">Email:</strong> <a href="mailto:${site.email}">${site.email}</a></p>
-            <p><strong data-i18n="footer.workingHours">Giờ làm việc:</strong> ${window.i18n.t(`misc.workingHours`) || '08:00 - 17:00, Thứ 2 - Thứ 7'}</p>
+            <p><strong data-i18n="footer.workingHours">Giờ làm việc:</strong> <span data-i18n="misc.workingHours"></span></p>
              
           </div>
         </div>

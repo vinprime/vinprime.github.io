@@ -171,7 +171,7 @@ class AboutPage {
               </div>
               <div class="info-content">
                 <h3 data-i18n="misc.working_hours">Giờ làm việc</h3>
-                <p>${window.i18n.t(`misc.workingHours`)}</p>
+                <p data-i18n="misc.workingHours"></p>
               </div>
             </div>
           </div>
