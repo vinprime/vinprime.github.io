@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (query) {
                 // Redirect to search results page or products page
-                window.location.href = `all-products-page.html?search=${encodeURIComponent(query)}`;
+                window.location.href = `products.html?search=${encodeURIComponent(query)}`;
             }
         });
     }
