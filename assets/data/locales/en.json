@@ -117,11 +117,7 @@
         "description": "Corn silage is a popular forage for ruminant animals because it is high in energy and digestibility and is easily adapted to mechanization from the stand-crop to time of feeding.\n\nCorn silage should have a light, pleasant smell with only a slight vinegar odor. It should be slightly brown to dark green. If it is dark brown or has an odor that is fruity, yeasty, burnt or rancid (butyric acid), excessive heating or improper fermentation has occurred. Knowledge of the silage process often explains why some silage may be of poor quality.\n\nProcess:\n1/ HARVESTING\nCorn should be harvested for silage after the ear is well dented but before the leaves turn brown and dry. The quantity and quality of corn silage are at their peak in this stage of development. The ear has accumulated most of its potential feeding value, but there has been little loss from the leaves and stalks. After the dent stage, feeding value of corn stalks and leaves decreases while field losses increase.\n\n2/ DRYING\nDuring Silage preparation, the grass is allowed to wilt in the field for a few hours to reduce the moisture content to around 60-75% as this is the optimum level. If the grass is left out longer, it may get too dry, or it may get rained on – and both these will reduce the efficiency of the fermentation.\n\n3/ CUTTING\nCorn silage should be cut into particles 1/2 to 3/4 inches in length. Particles of this size will pack more firmly in the silo and are more palatable to cattle. Very finely cut silage may be made with a recutter. This will increase the amount of dry matter that can be stored in a silo.\n\n4/ FERMENTATION\nCompress the grass to eject the oxygen more efficiently. This is important because the microorganisms especially, lactic acid bacteria, grow best under anaerobic (oxygen-free) conditions. When oxygen remains, plant enzymes and other bacteria react with the plant sugars and proteins to make energy, thus reducing the amount of nutrients in the final product.\n\nPacking style: Jumbo bag 650kg x 40 bags (26MT)/40 HC",
         "images": [
           "/assets/images/products/corn_silage_1.jpg",
-          "/assets/images/products/corn_silage_2.jpg",
-          "/assets/images/products/corn_silage_2.jpg",
-          "/assets/images/products/corn_silage_2.jpg",
-          "/assets/images/products/corn_silage_2.jpg",
-          "/assets/images/products/corn_silage_2.jpg"
+          "/assets/images/products/corn_silage_2.jpg"  
         ]
       },
       "corn_cob_meal": {
@@ -280,6 +276,7 @@
     "goToTop": "Go to top",
     "noProductsInGroup": "There are no products in this group",
     "productsUpdating": "Products are being updated. Please check back later.",
-    "workingHours": "08:00 - 17:00, Monday - Saturday"
+    "workingHours": "08:00 - 17:00, Monday - Saturday",
+    "image": "Photo"
   }
 }

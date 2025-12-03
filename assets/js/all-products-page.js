@@ -280,7 +280,7 @@ class AllProductsPage {
                     ${images.length > 1 ? `
                         <div class="image-counter">
                             <i class="fas fa-images"></i>
-                            ${images.length} ảnh
+                            ${images.length} ${window.i18n.t('misc.image')}
                         </div>
                     ` : ''}
                 </div>
