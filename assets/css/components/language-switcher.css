@@ -94,7 +94,7 @@
     background: #005a34;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1378px) {
     .language-switcher {
         position: fixed;
         bottom: 20px;
