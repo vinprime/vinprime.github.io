@@ -164,10 +164,12 @@
   "activities": {
     "title": "LĨNH VỰC HOẠT ĐỘNG",
     "subtitle": "Chuyên nghiệp trong từng khâu sản xuất và phân phối",
+    "overview": "Là doanh nghiệp hàng đầu trong lĩnh vực nguyên liệu nông sản - thực phẩm, chúng tôi tích hợp hệ sinh thái trọn vẹn từ sản xuất, thương mại đến xuất khẩu toàn cầu. Mọi hoạt động được xây dựng trên nền tảng công nghệ hiện đại, tiêu chuẩn quốc tế khắt khe và cam kết về chất lượng cao cấp, sự tin cậy trong từng khâu, mang lại giá trị bền vững cho đối tác trên toàn thế giới.",
     "data": {
       "trading": {
         "title": "GIAO DỊCH THƯƠNG MẠI",
         "description": "Phân phối và thương mại nguyên liệu chuyên nghiệp, uy tín trên toàn quốc.",
+        "detailsTitle": "Thế Mạnh Giao Dịch",
         "details": [
           "Xuất khẩu sang 20+ quốc gia",
           "Đạt tiêu chuẩn quốc tế",
@@ -178,6 +180,7 @@
       "export": {
         "title": "XUẤT KHẨU",
         "description": "Xuất khẩu sản phẩm đến các thị trường khó tính với chất lượng vượt trội.",
+        "detailsTitle": "Năng Lực Xuất Khẩu",
         "details": [
           "Xuất khẩu sang 20+ quốc gia",
           "Đạt tiêu chuẩn quốc tế",
@@ -188,6 +191,7 @@
       "production": {
         "title": "SẢN XUẤT",
         "description": "Sản xuất nguyên liệu chất lượng cao với công nghệ hiện đại, đạt chuẩn quốc tế.",
+        "detailsTitle": "Mạng Lưới Sản Xuất & Dịch Vụ",
         "details": [
           "Mạng lưới phân phối rộng khắp",
           "Hệ thống đại lý chính thức",
@@ -271,6 +275,6 @@
     "groupNavigation": "NHANH CHUYỂN NHÓM",
     "goToTop": "Lên đầu trang",
     "noProductsInGroup": "Chưa có sản phẩm trong nhóm này",
-    "productsUpdating": "Sản phẩm đang được cập nhật. Vui lòng quay lại sau." 
+    "productsUpdating": "Sản phẩm đang được cập nhật. Vui lòng quay lại sau."
   }
 }

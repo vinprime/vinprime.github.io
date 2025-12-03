@@ -121,6 +121,7 @@
      margin: 0 auto;
      line-height: 1.6;
      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
      animation: fadeInUp 1s ease-out 0.2s both;
  }
 

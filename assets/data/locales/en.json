@@ -168,9 +168,11 @@
   "activities": {
     "title": "ACTIVITES",
     "subtitle": "Professionalism in Every Step of Production and Distribution",
+    "overview": "As a leading enterprise in the field of agricultural and food raw materials, we integrate a complete ecosystem from production and trading to global export. Our activities are built on a foundation of advanced technology, strict international standards, and a commitment to delivering premium quality and reliability at every stage, creating sustainable value for partners worldwide.",
     "data": {
       "trading": {
         "title": "TRADING",
+        "detailsTitle": "Our Trading Advantages",
         "description": "Professional and reputable nationwide distribution and trading of raw materials.",
         "details": [
           "Modern production lines",
@@ -182,6 +184,7 @@
       "export": {
         "title": "EXPORT",
         "description": "Exporting products to demanding markets with superior quality standards.",
+        "detailsTitle": "Export Capabilities",
         "details": [
           "Exporting to 20+ countries",
           "Compliant with international standards",
@@ -192,6 +195,7 @@
       "production": {
         "title": "PRODUCTION",
         "description": "Manufacturing high-quality raw materials using modern technology, meeting international standards.",
+        "detailsTitle": "Production & Service Network",
         "details": [
           "Nationwide distribution network",
           "Official dealer/agent system",

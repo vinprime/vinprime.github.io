@@ -97,7 +97,41 @@
     max-width: 1200px;
     border: 1px solid var(--activity-border);
 }
+.activity-content.activity-bg-image {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                var(--activity-bg-image) center/cover no-repeat;
+    padding: 2rem;
+    /* border-radius: 12px; */
+    color: white; /* Đổi màu chữ cho phù hợp với nền tối */
+}
 
+/* Hoặc nếu muốn hiệu ứng parallax */
+.activity-content.activity-bg-image.parallax {
+    background-attachment: fixed;
+}
+
+/* Đảm bảo các phần tử bên trong hiển thị rõ trên nền ảnh */
+.activity-content.activity-bg-image .activity-description,
+.activity-content.activity-bg-image .details-title,
+.activity-content.activity-bg-image .details-list,
+.activity-content.activity-bg-image .highlight-card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Thêm lớp overlay nếu cần */
+.activity-content.activity-bg-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* border-radius: 12px; */
+    z-index: 1;
+}
 .overview-content {
     max-width: 800px;
     margin: 0 auto;
@@ -235,7 +269,7 @@
 .activity-description {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--activity-primary);
+    color: var(--activity-light);
     margin-bottom: 30px;
 }
 

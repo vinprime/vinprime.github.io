@@ -77,7 +77,7 @@ class ActivitiesSection {
                                  onerror="this.src='/assets/images/fallback.jpg'">
                         </div>
                         <p  data-i18n="${`activities.data.${activity.i18nKeyTitle}.description`}"  class="card-description">${activity.description}</p>
-                        <div class="card-cta">
+                        <div class="card-cta" onclick="window.open('activities-page.html?scrollTo=${activity.i18nKeyTitle}', '_blank')" style="cursor: pointer;">
                             <span data-i18n="misc.view_details">Xem chi tiết</span>
                             <i class="fas fa-arrow-right"></i>
                         </div>

@@ -92,16 +92,15 @@ class ActivitiesPage {
         const navEl = document.getElementById('activities-navigation');
         if (!navEl || !this.activitiesData) return;
 
-        const { activities } = this.activitiesData;
-
+        const { activities } = this.activitiesData; 
         navEl.innerHTML = `
             <div class="activities-navigation-title">
                 <i class="fas fa-list"></i>
-                <span data-i18n="activities.navigationTitle">Lĩnh vực hoạt động</span>
+                <span data-i18n="misc.groupNavigation">Lĩnh vực hoạt động</span>
             </div>
             <div class="activities-nav-links">
                 ${activities.map((activity, index) => `
-                    <a href="#activity-${activity.id}" 
+                    <a href="#${activity.i18nKeyTitle}" 
                        class="activity-nav-link ${index === 0 ? 'active' : ''}" 
                        data-activity="${activity.id}">
                         <i class="${activity.icon || 'fas fa-briefcase'}"></i>
@@ -117,11 +116,9 @@ class ActivitiesPage {
     renderActivities() {
         const container = document.getElementById('activities-list');
         if (!container || !this.activitiesData) return;
-
         const { activities } = this.activitiesData;
-
         container.innerHTML = activities.map(activity => `
-            <section class="activity-section" id="activity-${activity.id}" data-aos="fade-up">
+            <section class="activity-section" id="${activity.i18nKeyTitle}" data-aos="fade-up">
                 <div class="activity-header">
                     <div class="activity-title-container">
                         <div class="activity-icon">
@@ -133,7 +130,7 @@ class ActivitiesPage {
                     </div>
                 </div>
                 
-                <div class="activity-content">
+                <div class="activity-content activity-bg-image" style="--activity-bg-image: url('${activity.image}')">
                     <div class="activity-description" data-i18n="${`activities.data.${activity.i18nKeyTitle}.description`}">
                         ${activity.description}
                     </div>
@@ -142,7 +139,7 @@ class ActivitiesPage {
                         <div class="activity-details">
                             <h3 class="details-title">
                                 <i class="fas fa-list-check"></i>
-                                <span data-i18n="activities.detailsTitle">Chi tiết hoạt động</span>
+                                <span data-i18n="${`activities.data.${activity.i18nKeyTitle}.detailsTitle`}">Chi tiết hoạt động</span>
                             </h3>
                             <ul class="details-list">
                                 ${activity.details.map((detail, index) => `
@@ -279,4 +276,43 @@ class ActivitiesPage {
 document.addEventListener('DOMContentLoaded', () => {
     const activitiesPage = new ActivitiesPage();
     activitiesPage.init();
+});
+
+// Đợi trang load xong
+document.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash; // #product-key123
+    if (hash) {
+        // Đợi thêm chút để đảm bảo mọi thứ render xong
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 500);
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrollToId = urlParams.get('scrollTo');
+
+    if (scrollToId) {
+        setTimeout(() => {
+            const element = document.getElementById(scrollToId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 800); // Thời gian chờ dài hơn cho trang load hoàn tất
+    }
 });

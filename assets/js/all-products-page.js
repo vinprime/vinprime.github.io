@@ -244,14 +244,14 @@ class AllProductsPage {
         const images = product.images || [];
         const imageUrl = images.length > 0 ? images[0] : '/assets/images/placeholder.jpg';
         const description = product.description || '';
-
+        const key = product.key || '';
         // Parse description để trích xuất thông tin
         const parsedInfo = this.parseProductDescription(description);
         const hasProcess = parsedInfo.processSteps.length > 0;
         const hasPackaging = parsedInfo.packagingInfo !== '';
 
         return `
-            <div class="product-full-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-full-card" data-aos="fade-up" data-aos-delay="200" id="${key}">
                 <!-- Product Header -->
                 <div class="product-full-header">
                     <h2 class="product-full-name">
@@ -571,6 +571,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 });
+// Đợi trang load xong
+document.addEventListener('DOMContentLoaded', function () {
+    const hash = window.location.hash; // #product-key123
+    if (hash) {
+        // Đợi thêm chút để đảm bảo mọi thứ render xong
+        setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 500);
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrollToId = urlParams.get('scrollTo');
 
+    if (scrollToId) {
+        setTimeout(() => {
+            const element = document.getElementById(scrollToId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Thêm highlight
+                element.classList.add('highlight');
+                setTimeout(() => element.classList.remove('highlight'), 2000);
+            }
+        }, 800); // Thời gian chờ dài hơn cho trang load hoàn tất
+    }
+});
 // Export cho các module khác sử dụng
 export { AllProductsPage };

@@ -236,7 +236,7 @@ class ProductGroupDetail {
             <div class="related-product-info">
                 <p>${this.getShortDescription(product.description)}</p>
                 <div class="product-actions">
-    <a href="product-detail.html?id=${product.key}" class="btn btn-outline">
+    <a href="all-products-page.html?scrollTo=${product.key}" class="btn btn-outline" target="_blank">
         <i class="fas fa-info-circle"></i>
         <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
     </a>
@@ -262,7 +262,7 @@ class ProductGroupDetail {
                  alt="${productName}"
                  onerror="this.src='/assets/images/placeholder.jpg'">
             <div class="product-overlay">
-                <a href="product-detail.html?id=${product.key}" class="view-detail-btn">
+                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
                     <i class="fas fa-eye"></i>
                     ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
                 </a>
@@ -276,7 +276,7 @@ class ProductGroupDetail {
                  alt="${productName}"
                  onerror="this.src='/assets/images/placeholder.jpg'">
             <div class="product-overlay">
-                <a href="product-detail.html?id=${product.key}" class="view-detail-btn">
+                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
                     <i class="fas fa-eye"></i>
                     ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
                 </a>
@@ -301,7 +301,7 @@ class ProductGroupDetail {
             <div class="swiper-button-next swiper-button-next-${index}"></div>
             <div class="swiper-button-prev swiper-button-prev-${index}"></div>
             <div class="product-overlay">
-                <a href="product-detail.html?id=${product.key}" class="view-detail-btn">
+                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
                     <i class="fas fa-eye"></i>
                     ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
                 </a>
