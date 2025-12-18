@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title data-i18n="site.title" data-i18n-params='{"pageName": "Products"}'></title>
     <meta name="description" content="Chi tiết sản phẩm nguyên liệu chăn nuôi VinPrime">
-    
+
     <!-- Preload -->
     <link rel="preload" href="assets/css/main.css" as="style">
     <link rel="preload" href="assets/css/pages/product-group-detail-desktop.css" as="style">
     <link rel="preload" href="assets/css/pages/product-group-detail-mobile.css" as="style">
     <link rel="preload" href="assets/js/utils.js" as="script">
-    
+
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/pages/product-group-detail-desktop.css">
     <link rel="stylesheet" href="assets/css/pages/product-group-detail-mobile.css">
+    <link rel="stylesheet" href="assets/css/pages/swiper.css">
     <link href="assets/css/aos.css" rel="stylesheet">
 </head>
 
@@ -62,14 +62,18 @@
                             <div class="swiper-wrapper" id="main-image-slides">
                                 <!-- Main images will be loaded here -->
                             </div>
-                            <!-- Navigation buttons -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
+                            <!-- Navigation buttons với Font Awesome -->
+                            <button class="swiper-button-prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="swiper-button-next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                             <!-- Pagination -->
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    
+
                     <div class="thumbnail-container">
                         <div class="swiper thumbnail-swiper">
                             <div class="swiper-wrapper" id="thumbnail-slides">
@@ -81,7 +85,7 @@
 
                 <!-- Right: Product Information -->
                 <div class="product-info" data-aos="fade-left">
-                    <div class="product-header"> 
+                    <div class="product-header">
                         <h1 class="product-title" id="product-title"></h1>
                         <div class="product-badges">
                             <span class="badge high-quality" data-i18n="products.highQuality">Chất lượng cao</span>
@@ -91,14 +95,15 @@
 
                     <div class="product-description" id="product-description">
                         <!-- Description loaded from JSON -->
-                    </div>  
+                    </div>
                 </div>
             </div>
 
             <!-- Related Products -->
             <section class="related-products" data-aos="fade-up">
                 <div class="section-header">
-                    <h2><i class="fas fa-layer-group"></i> <span data-i18n="products.related">Sản phẩm liên quan</span></h2>
+                    <h2><i class="fas fa-layer-group"></i> <span data-i18n="products.related">Sản phẩm liên quan</span>
+                    </h2>
                     <a href="all-products-page.html" class="view-all" data-i18n="products.viewAll">Xem tất cả</a>
                 </div>
                 <div class="related-products-grid" id="related-products">
@@ -112,9 +117,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="assets/js/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="assets/js/main.js"></script>
-    
+
     <!-- JavaScript -->
     <script type="module" src="assets/js/product-group-detail.js"></script>
 </body>

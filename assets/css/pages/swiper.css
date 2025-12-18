@@ -1,0 +1,652 @@
+/* Main Gallery Styles - Sửa cho đúng với HTML hiện tại */
+.main-image-swiper .swiper-wrapper {
+    display: block;
+}
+
+#main-image-slides {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-slide {
+    display: none;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.image-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+.image-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Thumbnail styles */
+.thumbnail-container {
+    margin-top: 15px;
+}
+
+.thumbnail-swiper .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumbnail-item {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.thumbnail-item:hover,
+.thumbnail-item.active {
+    opacity: 1;
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #007bff;
+    color: white;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Pagination */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pagination-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+    background: #007bff;
+    transform: scale(1.2);
+}
+
+/* Product Galleries Styles */
+.product-image-gallery {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.product-image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Navigation buttons */
+.product-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.product-nav-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+.product-nav-btn.prev-btn {
+    left: 10px;
+}
+
+.product-nav-btn.next-btn {
+    right: 10px;
+}
+
+/* Product Pagination */
+.product-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.product-pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-pagination-dot.active {
+    background: #007bff;
+    transform: scale(1.2);
+}
+
+/* Product Overlay */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 60%, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+    z-index: 1;
+}
+
+.product-image-gallery:hover .product-overlay {
+    opacity: 1;
+}
+
+.view-detail-btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.view-detail-btn:hover {
+    background: #0056b3;
+}
+
+/* Related product cards adjustments */
+.related-product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.related-product-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-image-gallery {
+        height: 200px;
+    }
+    
+    .related-product-image {
+        height: 200px;
+    }
+    
+    .thumbnail-item {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .product-nav-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image-gallery {
+        height: 180px;
+    }
+    
+    .related-product-image {
+        height: 180px;
+    }
+    
+    .thumbnail-item {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .product-pagination {
+        bottom: 5px;
+    }
+    
+    .product-pagination-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+/* Navigation buttons - Cải thiện style */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: none;
+    font-size: 0; /* Ẩn text mặc định của swiper */
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #007bff;
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+.swiper-button-next:hover i,
+.swiper-button-prev:hover i {
+    color: white;
+}
+
+/* Ẩn mũi tên mặc định của swiper */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: none !important;
+}
+
+/* Tạo icon mới bằng CSS hoặc dùng Font Awesome */
+.swiper-button-next::before {
+    content: "›";
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.swiper-button-prev::before {
+    content: "‹";
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+    color: white;
+}
+
+/* Product navigation buttons - Cũng sửa tương tự */
+.product-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.product-nav-btn:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.25);
+}
+
+.product-nav-btn.prev-btn {
+    left: 15px;
+}
+
+.product-nav-btn.next-btn {
+    right: 15px;
+}
+
+/* Ẩn nút navigation nếu chỉ có 1 ảnh */
+.related-product-image:has(img:only-child) .product-nav-btn,
+.related-product-image:has(.product-image-slide:only-child) .product-nav-btn {
+    display: none;
+}
+
+.main-image-container:has(.image-slide:only-child) .swiper-button-next,
+.main-image-container:has(.image-slide:only-child) .swiper-button-prev {
+    display: none;
+}
+
+/* Thêm disabled state cho clarity */
+.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .swiper-button-next::before,
+    .swiper-button-prev::before {
+        font-size: 22px;
+    }
+    
+    .swiper-button-next i,
+    .swiper-button-prev i {
+        font-size: 16px;
+    }
+    
+    .product-nav-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .swiper-button-next {
+        right: 5px;
+    }
+    
+    .swiper-button-prev {
+        left: 5px;
+    }
+}
+/* Main Gallery Container */
+.main-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Hoặc chiều cao bạn muốn */
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f5f5; /* Background khi loading hoặc ảnh lỗi */
+}
+
+.main-image-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#main-image-slides {
+    width: 100%;
+    height: 100%;
+}
+
+.image-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* hoặc contain tùy nhu cầu */
+    object-position: center;
+    border-radius: 8px;
+}
+
+/* Nếu muốn ảnh luôn giữ tỷ lệ và fit khung */
+.image-slide .image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.image-slide .image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Giữ tỷ lệ ảnh gốc */
+    object-position: center;
+}
+
+/* Product Images */
+.product-image-gallery {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.product-gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.product-image-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.product-image-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.product-image-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Related product image container */
+.related-product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f5f5f5;
+}
+
+.related-product-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #f5f5f5;
+}
+
+/* Thumbnail images */
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Thumbnail có thể dùng cover */
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Heights */
+@media (max-width: 992px) {
+    .main-image-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image-container {
+        height: 350px;
+    }
+    
+    .product-image-gallery,
+    .related-product-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-image-container {
+        height: 300px;
+    }
+    
+    .product-image-gallery,
+    .related-product-image {
+        height: 180px;
+    }
+}
+ 

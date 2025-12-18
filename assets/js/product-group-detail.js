@@ -5,7 +5,8 @@ class ProductGroupDetail {
         this.groupId = this.getGroupIdFromURL();
         this.groupData = null;
         this.products = [];
-        this.swiperInstances = {};
+        this.currentMainImageIndex = 0;
+        this.productImageIndices = {}; // Lưu trữ current index cho từng sản phẩm
         this.bindLanguageChange();
         this.init();
     }
@@ -23,9 +24,11 @@ class ProductGroupDetail {
             this.updateContentLanguage();
         });
     }
+
     updateContentLanguage() {
         this.init();
     }
+
     getGroupIdFromURL() {
         const params = new URLSearchParams(window.location.search);
         return params.get('id'); // id ở đây là group id (ví dụ: "corn")
@@ -42,7 +45,6 @@ class ProductGroupDetail {
             }
 
             await this.renderGroupDetail();
-            this.initSwiper();
             this.setupEventListeners();
 
             if (typeof AOS !== 'undefined') {
@@ -140,21 +142,21 @@ class ProductGroupDetail {
 
         // Thay đổi tiêu đề related products thành "Các sản phẩm trong nhóm"
         const relatedTitle = document.querySelector('.related-products h2');
-        // Products in group ${this.groupData.name}
         if (relatedTitle) {
             relatedTitle.innerHTML = `<i class="fas fa-boxes"></i> <span data-i18n="[html]products.groupProducts" 
         data-i18n-params='{"groupName": "${this.groupData.name}"}'>${window.i18n.t(`products.groupProducts`)} ${this.groupData.name}</span>`;
         }
     }
-    renderGallery() {
-        const mainSwiper = document.getElementById('main-image-slides');
-        const thumbSwiper = document.getElementById('thumbnail-slides');
 
-        if (!mainSwiper || !thumbSwiper) return;
+    renderGallery() {
+        const mainSlidesContainer = document.getElementById('main-image-slides');
+        const thumbSlidesContainer = document.getElementById('thumbnail-slides');
+
+        if (!mainSlidesContainer || !thumbSlidesContainer) return;
 
         // Clear existing content
-        mainSwiper.innerHTML = '';
-        thumbSwiper.innerHTML = '';
+        mainSlidesContainer.innerHTML = '';
+        thumbSlidesContainer.innerHTML = '';
 
         // Tập hợp tất cả ảnh từ các sản phẩm trong nhóm
         let allImages = [];
@@ -167,14 +169,6 @@ class ProductGroupDetail {
                     src: product.images[0],
                     alt: `${product.name} - Ảnh đại diện`
                 });
-
-                // Có thể thêm thêm ảnh nếu muốn
-                // if (product.images.length > 1) {
-                //     allImages.push({
-                //         src: product.images[1],
-                //         alt: `${product.name} - Hình 2`
-                //     });
-                // }
             }
         });
 
@@ -189,29 +183,54 @@ class ProductGroupDetail {
         // Render main images
         allImages.forEach((img, index) => {
             const slide = document.createElement('div');
-            slide.className = 'swiper-slide';
+            slide.className = 'image-slide';
+            slide.setAttribute('data-index', index);
+            slide.style.display = index === 0 ? 'block' : 'none'; // Chỉ hiển thị ảnh đầu tiên
             slide.innerHTML = `
-            <img src="${img.src}" 
-                 alt="${img.alt}"
-                 loading="lazy"
-                 onerror="this.src='/assets/images/placeholder.jpg'">
-        `;
-            mainSwiper.appendChild(slide);
+                <img src="${img.src}" 
+                     alt="${img.alt}"
+                     loading="lazy"
+                     onerror="this.src='/assets/images/placeholder.jpg'">
+            `;
+            mainSlidesContainer.appendChild(slide);
         });
 
         // Render thumbnails
         allImages.forEach((img, index) => {
             const thumb = document.createElement('div');
-            thumb.className = 'swiper-slide';
+            thumb.className = 'thumbnail-item';
+            thumb.setAttribute('data-index', index);
             thumb.innerHTML = `
-            <img src="${img.src}" 
-                 alt="${img.alt} - Thumbnail"
-                 loading="lazy"
-                 onerror="this.src='/assets/images/placeholder.jpg'">
-        `;
-            thumbSwiper.appendChild(thumb);
+                <img src="${img.src}" 
+                     alt="${img.alt} - Thumbnail"
+                     loading="lazy"
+                     onerror="this.src='/assets/images/placeholder.jpg'">
+            `;
+            thumbSlidesContainer.appendChild(thumb);
         });
+
+        // Thêm pagination dots
+        const paginationContainer = document.querySelector('.swiper-pagination');
+        if (paginationContainer && allImages.length > 1) {
+            paginationContainer.innerHTML = '';
+            allImages.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = `pagination-dot ${index === 0 ? 'active' : ''}`;
+                dot.setAttribute('data-index', index);
+                paginationContainer.appendChild(dot);
+            });
+        }
+
+        // Hiển thị navigation buttons nếu có nhiều hơn 1 ảnh
+        const nextBtn = document.querySelector('.swiper-button-next');
+        const prevBtn = document.querySelector('.swiper-button-prev');
+        if (allImages.length <= 1) {
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (paginationContainer) paginationContainer.style.display = 'none';
+        }
     }
+
     renderProductsGrid() {
         const relatedProductsEl = document.getElementById('related-products');
         if (!relatedProductsEl) return;
@@ -226,163 +245,243 @@ class ProductGroupDetail {
             return;
         }
 
-        // Render tất cả sản phẩm trong nhóm với swiper cho mỗi sản phẩm
+        // Render tất cả sản phẩm trong nhóm
         relatedProductsEl.innerHTML = this.products.map((product, index) => `
         <div class="related-product-card" data-aos="fade-up">
-                <h3>${product.name}</h3>
+            <h3>${product.name}</h3>
             <div class="related-product-image">
-                ${this.renderProductSwiper(product, index)}
+                ${this.renderProductGallery(product, index)}
             </div>
             <div class="related-product-info">
                 <p>${this.getShortDescription(product.description)}</p>
                 <div class="product-actions">
-    <a href="all-products-page.html?scrollTo=${product.key}" class="btn btn-outline" target="_blank">
-        <i class="fas fa-info-circle"></i>
-        <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
-    </a>
-    <a href="index.html?scrollTo=quotation" class="btn btn-primary" target="_blank">
-        <i class="fas fa-shopping-cart"></i>
-        <span>${window.i18n.t('misc.contact') || 'Đặt hàng'}</span>
-    </a>
-</div>
+                    <a href="all-products-page.html?scrollTo=${product.key}" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-info-circle"></i>
+                        <span>${window.i18n.t('misc.view_details') || 'Chi tiết'}</span>
+                    </a>
+                    <a href="index.html?scrollTo=quotation" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>${window.i18n.t('misc.contact') || 'Đặt hàng'}</span>
+                    </a>
+                </div>
             </div>
         </div>
     `).join('');
 
-        // Khởi tạo swiper cho tất cả sản phẩm sau khi render
-        this.initProductSwipers();
+        // Setup product image galleries
+        this.setupProductGalleries();
     }
 
-    renderProductSwiper(product, index) {
+    renderProductGallery(product, productIndex) {
         const images = product.images || [];
         const productName = product.name;
+        
         if (images.length === 0) {
             return `
-            <img src="/assets/images/placeholder.jpg" 
-                 alt="${productName}"
-                 onerror="this.src='/assets/images/placeholder.jpg'">
-            <div class="product-overlay">
-                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
-                    <i class="fas fa-eye"></i>
-                    ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
-                </a>
-            </div>
-        `;
+                <img src="/assets/images/placeholder.jpg" 
+                     alt="${productName}"
+                     onerror="this.src='/assets/images/placeholder.jpg'">
+                <div class="product-overlay">
+                    <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
+                    </a>
+                </div>
+            `;
         }
 
         if (images.length === 1) {
             return `
-            <img src="${images[0]}" 
-                 alt="${productName}"
-                 onerror="this.src='/assets/images/placeholder.jpg'">
-            <div class="product-overlay">
-                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
-                    <i class="fas fa-eye"></i>
-                    ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
-                </a>
+                <img src="${images[0]}" 
+                     alt="${productName}"
+                     onerror="this.src='/assets/images/placeholder.jpg'">
+                <div class="product-overlay">
+                    <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
+                    </a>
+                </div>
+            `;
+        }
+
+        // Nếu có nhiều ảnh, tạo gallery với navigation
+        return `
+            <div class="product-image-gallery" data-product-index="${productIndex}">
+                <div class="product-gallery-container">
+                    ${images.map((img, imgIndex) => `
+                        <div class="product-image-slide ${imgIndex === 0 ? 'active' : ''}" 
+                             data-index="${imgIndex}"
+                             style="${imgIndex === 0 ? '' : 'display: none;'}">
+                            <img src="${img}" 
+                                 alt="${productName} - Hình ${imgIndex + 1}"
+                                 onerror="this.src='/assets/images/placeholder.jpg'">
+                        </div>
+                    `).join('')}
+                </div>
+                <!-- Navigation buttons -->
+                <button class="product-nav-btn prev-btn" data-product-index="${productIndex}">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="product-nav-btn next-btn" data-product-index="${productIndex}">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <!-- Pagination dots -->
+                <div class="product-pagination" data-product-index="${productIndex}">
+                    ${images.map((_, imgIndex) => `
+                        <span class="product-pagination-dot ${imgIndex === 0 ? 'active' : ''}" 
+                              data-index="${imgIndex}"></span>
+                    `).join('')}
+                </div>
+                <div class="product-overlay">
+                    <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
+                        <i class="fas fa-eye"></i>
+                        ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
+                    </a>
+                </div>
             </div>
         `;
-        }
-        // Nếu có nhiều ảnh, tạo swiper
-        return `
-        <div class="product-mini-swiper swiper-${index}">
-            <div class="swiper-wrapper">
-                ${images.map((img, imgIndex) => `
-                    <div class="swiper-slide">
-                        <img src="${img}" 
-                             alt="${productName} - Hình ${imgIndex + 1}"
-                             onerror="this.src='/assets/images/placeholder.jpg'">
-                    </div>
-                `).join('')}
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination swiper-pagination-${index}"></div>
-            <!-- Add Navigation -->
-            <div class="swiper-button-next swiper-button-next-${index}"></div>
-            <div class="swiper-button-prev swiper-button-prev-${index}"></div>
-            <div class="product-overlay">
-                <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
-                    <i class="fas fa-eye"></i>
-                    ${window.i18n.t('products.viewDetail') || 'Xem chi tiết'}
-                </a>
-            </div>
-        </div>
-    `;
     }
 
-    initProductSwipers() {
-        console.log('=== INITIALIZING PRODUCT SWIPERS ===');
-        console.log('Products count:', this.products.length);
-
+    setupProductGalleries() {
+        // Khởi tạo chỉ số cho mỗi sản phẩm
         this.products.forEach((product, index) => {
-            const images = product.images || [];
-            console.log(`Product ${index}: ${images.length} images`);
+            this.productImageIndices[index] = 0;
+        });
 
-            if (images.length > 1) {
-                // Đợi DOM render xong
-                setTimeout(() => {
-                    const swiperSelector = `.swiper-${index}`;
-                    const nextSelector = `.swiper-button-next-${index}`;
-                    const prevSelector = `.swiper-button-prev-${index}`;
-                    const paginationSelector = `.swiper-pagination-${index}`;
-
-                    console.log(`Looking for swiper: ${swiperSelector}`);
-
-                    const swiperEl = document.querySelector(swiperSelector);
-                    const nextEl = document.querySelector(nextSelector);
-                    const prevEl = document.querySelector(prevSelector);
-                    const paginationEl = document.querySelector(paginationSelector);
-
-                    console.log(`Swiper element found:`, !!swiperEl);
-                    console.log(`Next button found:`, !!nextEl);
-                    console.log(`Prev button found:`, !!prevEl);
-                    console.log(`Pagination found:`, !!paginationEl);
-
-                    if (swiperEl && nextEl && prevEl) {
-                        try {
-                            console.log(`Initializing swiper for product ${index}...`);
-
-                        } catch (error) {
-                            console.error(`❌ Failed to initialize swiper ${index}:`, error);
-                        }
-                    } else {
-                        console.warn(`⚠️ Missing elements for swiper ${index}`);
-                    }
-                }, 100); // Tăng timeout để chắc DOM đã render
+        // Thêm event listeners cho product galleries
+        document.querySelectorAll('.product-image-gallery').forEach(gallery => {
+            const productIndex = parseInt(gallery.getAttribute('data-product-index'));
+            
+            // Next button
+            const nextBtn = gallery.querySelector('.next-btn');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.showNextProductImage(productIndex);
+                });
             }
+            
+            // Prev button
+            const prevBtn = gallery.querySelector('.prev-btn');
+            if (prevBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.showPrevProductImage(productIndex);
+                });
+            }
+            
+            // Pagination dots
+            gallery.querySelectorAll('.product-pagination-dot').forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const index = parseInt(dot.getAttribute('data-index'));
+                    this.showProductImage(productIndex, index);
+                });
+            });
         });
     }
 
-    addManualClickHandlers(index, swiper) {
-        const nextBtn = document.querySelector(`.swiper-button-next-${index}`);
-        const prevBtn = document.querySelector(`.swiper-button-prev-${index}`);
+    showNextProductImage(productIndex) {
+        const product = this.products[productIndex];
+        if (!product || !product.images) return;
+        
+        const currentIndex = this.productImageIndices[productIndex] || 0;
+        const nextIndex = (currentIndex + 1) % product.images.length;
+        this.showProductImage(productIndex, nextIndex);
+    }
 
-        if (nextBtn) {
-            // Remove existing listeners trước
-            const newNextBtn = nextBtn.cloneNode(true);
-            nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+    showPrevProductImage(productIndex) {
+        const product = this.products[productIndex];
+        if (!product || !product.images) return;
+        
+        const currentIndex = this.productImageIndices[productIndex] || 0;
+        const prevIndex = currentIndex === 0 ? product.images.length - 1 : currentIndex - 1;
+        this.showProductImage(productIndex, prevIndex);
+    }
 
-            newNextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log(`Manual click on next button ${index}`);
-                swiper.slideNext();
-            });
+    showProductImage(productIndex, targetIndex) {
+        const product = this.products[productIndex];
+        if (!product || !product.images || targetIndex < 0 || targetIndex >= product.images.length) return;
+        
+        // Cập nhật chỉ số hiện tại
+        this.productImageIndices[productIndex] = targetIndex;
+        
+        // Tìm gallery element
+        const gallery = document.querySelector(`.product-image-gallery[data-product-index="${productIndex}"]`);
+        if (!gallery) return;
+        
+        // Ẩn tất cả slides
+        gallery.querySelectorAll('.product-image-slide').forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.display = 'none';
+        });
+        
+        // Hiển thị slide mới
+        const targetSlide = gallery.querySelector(`.product-image-slide[data-index="${targetIndex}"]`);
+        if (targetSlide) {
+            targetSlide.classList.add('active');
+            targetSlide.style.display = 'block';
         }
-
-        if (prevBtn) {
-            // Remove existing listeners trước
-            const newPrevBtn = prevBtn.cloneNode(true);
-            prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
-
-            newPrevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log(`Manual click on prev button ${index}`);
-                swiper.slidePrev();
-            });
+        
+        // Cập nhật pagination dots
+        gallery.querySelectorAll('.product-pagination-dot').forEach(dot => {
+            dot.classList.remove('active');
+        });
+        const targetDot = gallery.querySelector(`.product-pagination-dot[data-index="${targetIndex}"]`);
+        if (targetDot) {
+            targetDot.classList.add('active');
         }
     }
+
+    showNextMainImage() {
+        const mainSlides = document.querySelectorAll('#main-image-slides .image-slide');
+        if (mainSlides.length <= 1) return;
+        
+        const nextIndex = (this.currentMainImageIndex + 1) % mainSlides.length;
+        this.showMainImage(nextIndex);
+    }
+
+    showPrevMainImage() {
+        const mainSlides = document.querySelectorAll('#main-image-slides .image-slide');
+        if (mainSlides.length <= 1) return;
+        
+        const prevIndex = this.currentMainImageIndex === 0 ? mainSlides.length - 1 : this.currentMainImageIndex - 1;
+        this.showMainImage(prevIndex);
+    }
+
+    showMainImage(targetIndex) {
+        const mainSlides = document.querySelectorAll('#main-image-slides .image-slide');
+        const thumbnails = document.querySelectorAll('#thumbnail-slides .thumbnail-item');
+        const paginationDots = document.querySelectorAll('.pagination-dot');
+        
+        if (targetIndex < 0 || targetIndex >= mainSlides.length) return;
+        
+        // Ẩn ảnh hiện tại
+        mainSlides[this.currentMainImageIndex].style.display = 'none';
+        
+        // Hiển thị ảnh mới
+        mainSlides[targetIndex].style.display = 'block';
+        
+        // Cập nhật active thumbnail
+        thumbnails.forEach(thumb => {
+            thumb.classList.remove('active');
+        });
+        if (thumbnails[targetIndex]) {
+            thumbnails[targetIndex].classList.add('active');
+        }
+        
+        // Cập nhật pagination dots
+        paginationDots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        if (paginationDots[targetIndex]) {
+            paginationDots[targetIndex].classList.add('active');
+        }
+        
+        // Cập nhật chỉ số hiện tại
+        this.currentMainImageIndex = targetIndex;
+    }
+
     getShortDescription(description) {
         if (!description) return '';
         const firstLine = description.split('\n')[0];
@@ -391,47 +490,68 @@ class ProductGroupDetail {
             firstLine;
     }
 
-    initSwiper() {
-        // Nếu muốn hiển thị banner/ảnh đại diện cho nhóm
-        // Bạn có thể tạo swiper ở đây nếu cần
-    }
-
     setupEventListeners() {
-        // Sử dụng event delegation cho swiper buttons
-
-    }
-
-    findParentSwiper(element) {
-        let parent = element.parentElement;
-        while (parent) {
-            if (parent.classList.contains('swiper')) {
-                return parent;
-            }
-            parent = parent.parentElement;
-        }
-        return null;
-    }
-
-    triggerSwiperNavigation(button) {
-        const swiperContainer = this.findParentSwiper(button);
-        if (!swiperContainer) return;
-
-        // Tìm swiper instance dựa trên container
-        const swiperKey = Object.keys(this.swiperInstances).find(key => {
-            const instance = this.swiperInstances[key];
-            return instance && instance.el === swiperContainer;
+        // Main gallery navigation
+        document.querySelector('.swiper-button-next')?.addEventListener('click', () => {
+            this.showNextMainImage();
         });
+        
+        document.querySelector('.swiper-button-prev')?.addEventListener('click', () => {
+            this.showPrevMainImage();
+        });
+        
+        // Thumbnail clicks
+        document.querySelectorAll('#thumbnail-slides .thumbnail-item').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const index = parseInt(thumb.getAttribute('data-index'));
+                if (!isNaN(index)) {
+                    this.showMainImage(index);
+                }
+            });
+        });
+        
+        // Pagination dot clicks
+        document.querySelectorAll('.pagination-dot').forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                if (!isNaN(index)) {
+                    this.showMainImage(index);
+                }
+            });
+        });
+        
+        // Touch events cho mobile
+        this.setupTouchEvents();
+    }
 
-        if (swiperKey && this.swiperInstances[swiperKey]) {
-            const swiper = this.swiperInstances[swiperKey];
-            console.log('Found swiper instance:', swiper);
+    setupTouchEvents() {
+        const mainContainer = document.querySelector('.main-image-container');
+        if (!mainContainer) return;
+        
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        mainContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        mainContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            this.handleSwipe(touchStartX, touchEndX);
+        }, { passive: true });
+    }
 
-            if (button.classList.contains('swiper-button-next')) {
-                console.log('Triggering swiper.slideNext()');
-                swiper.slideNext();
-            } else if (button.classList.contains('swiper-button-prev')) {
-                console.log('Triggering swiper.slidePrev()');
-                swiper.slidePrev();
+    handleSwipe(startX, endX) {
+        const threshold = 50; // Minimum swipe distance
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+                // Swipe left - next image
+                this.showNextMainImage();
+            } else {
+                // Swipe right - previous image
+                this.showPrevMainImage();
             }
         }
     }
