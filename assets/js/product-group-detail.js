@@ -324,14 +324,7 @@ class ProductGroupDetail {
                 </button>
                 <button class="product-nav-btn next-btn" data-product-index="${productIndex}">
                     <i class="fas fa-chevron-right"></i>
-                </button>
-                <!-- Pagination dots -->
-                <div class="product-pagination" data-product-index="${productIndex}">
-                    ${images.map((_, imgIndex) => `
-                        <span class="product-pagination-dot ${imgIndex === 0 ? 'active' : ''}" 
-                              data-index="${imgIndex}"></span>
-                    `).join('')}
-                </div>
+                </button> 
                 <div class="product-overlay">
                     <a href="all-products-page.html?scrollTo=${product.key}" class="view-detail-btn" target="_blank">
                         <i class="fas fa-eye"></i>
