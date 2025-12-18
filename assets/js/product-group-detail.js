@@ -219,8 +219,8 @@ class ProductGroupDetail {
             relatedProductsEl.innerHTML = `
             <div class="no-products" style="grid-column: 1 / -1; text-align: center; padding: 40px;">
                 <i class="fas fa-box-open fa-3x" style="color: #6c757d; margin-bottom: 20px;"></i>
-                <h3 style="color: #333; margin-bottom: 10px;"  data-i18n="misc.noProducts">Không có sản phẩm nào</h3>
-                <p style="color: #666;" data-i18n="misc.noProductsInThisGroup">Hiện không có sản phẩm trong nhóm này.</p>
+                <h3 style="color: #333; margin-bottom: 10px;">${window.i18n.t('misc.noProducts') || 'Không có sản phẩm nào'}</h3>
+                <p style="color: #666;">${window.i18n.t('misc.noProductsInThisGroup') || 'Hiện không có sản phẩm trong nhóm này.'}</p>
             </div>
         `;
             return;
